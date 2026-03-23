@@ -1,0 +1,2383 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    <title>SICO</title>
+
+    <style type="text/css">
+        div,
+        p,
+        a,
+        li,
+        td {
+            -webkit-text-size-adjust: none;
+        }
+        
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .ReadMsgBody {
+            width: 100%;
+            background-color: #ffffff;
+        }
+        
+        .ExternalClass {
+            width: 100%;
+            background-color: #ffffff;
+        }
+        
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        html {
+            width: 100%;
+            background-color: #ffffff;
+        }
+        
+        @font-face {
+            font-family: 'proxima_novalight';
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-light-webfont.eot');
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'), url('https://rocketway.net/themebuilder/products/font/proximanova-light-webfont.woff') format('woff'), url('https://rocketway.net/themebuilder/products/font/proximanova-light-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'proxima_nova_rgregular';
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-regular-webfont.eot');
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('https://rocketway.net/themebuilder/products/font/proximanova-regular-webfont.woff') format('woff'), url('https://rocketway.net/themebuilder/products/font/proximanova-regular-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'proxima_novasemibold';
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-semibold-webfont.eot');
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('https://rocketway.net/themebuilder/products/font/proximanova-semibold-webfont.woff') format('woff'), url('https://rocketway.net/themebuilder/products/font/proximanova-semibold-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'proxima_nova_rgbold';
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-bold-webfont.eot');
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('https://rocketway.net/themebuilder/products/font/proximanova-bold-webfont.woff') format('woff'), url('https://rocketway.net/themebuilder/products/font/proximanova-bold-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'proxima_novathin';
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-thin-webfont.eot');
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-thin-webfont.eot?#iefix') format('embedded-opentype'), url('https://rocketway.net/themebuilder/products/font/proximanova-thin-webfont.woff') format('woff'), url('https://rocketway.net/themebuilder/products/font/proximanova-thin-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        @font-face {
+            font-family: 'proxima_novaextrabold';
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-extrabold-webfont.eot');
+            src: url('https://rocketway.net/themebuilder/products/font/proximanova-extrabold-webfont.eot?#iefix') format('embedded-opentype'), url('https://rocketway.net/themebuilder/products/font/proximanova-extrabold-webfont.woff2') format('woff2'), url('https://rocketway.net/themebuilder/products/font/proximanova-extrabold-webfont.woff') format('woff'), url('https://rocketway.net/themebuilder/products/font/proximanova-extrabold-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        p {
+            padding: 0!important;
+            margin-top: 0!important;
+            margin-right: 0!important;
+            margin-bottom: 0!important;
+            margin-left: 0!important;
+        }
+        
+        .underline:hover {
+            text-decoration: underline!important;
+        }
+        
+        #ring {
+            position: relative;
+            z-index: 1;
+        }
+        
+        #ring::after {
+            content: "";
+            position: absolute;
+            background-size: 31px!important;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-repeat: no-repeat!important;
+            background: url('https://rocketway.net/themebuilder/products/templates/atom/images/icon_ring.png') center center;
+            opacity: .2;
+        }
+        
+        #ring:hover {
+            background-repeat: no-repeat!important;
+            position: none;
+            background: url('https://rocketway.net/themebuilder/products/templates/atom/images/icon_ring.png') center center;
+            opacity: .9!important;
+            z-index: 2;
+            background-size: 31px!important;
+        }
+        
+        .jump:hover {
+            opacity: 0.75;
+            filter: alpha(opacity=75);
+            padding-top: 10px!important;
+        }
+        
+        a#rotator img {
+            -webkit-transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            -ms-transition: all 1s ease-in-out;
+        }
+        
+        a#rotator img:hover {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+        }
+        
+        #logo img {
+            width: 125px;
+            height: auto;
+        }
+        
+        .image57 img {
+            width: 57px;
+            height: auto;
+        }
+        
+        .image175 img {
+            width: 175px;
+            height: auto;
+        }
+        
+        .image270 img {
+            width: 270px;
+            height: auto;
+        }
+        
+        .image103 img {
+            width: 103px;
+            height: auto;
+        }
+        
+        .image300 img {
+            width: 300px;
+            height: auto;
+        }
+        
+        .icon72 img {
+            width: 72px;
+            height: auto;
+        }
+        
+        .icon24 img {
+            width: 24px;
+            height: auto;
+        }
+        
+        .icon40 img {
+            width: 40px;
+            height: auto;
+        }
+        
+        .icon51 img {
+            width: 51px;
+            height: auto;
+        }
+        
+        .image270 img {
+            width: 270px;
+            height: auto;
+        }
+        
+        .image600 img {
+            width: 600px;
+            height: auto;
+        }
+        
+        #pad6 img {
+            padding: 6px!important;
+            text-align: center!important;
+            display: inline;
+        }
+        
+        #ring img {
+            width: 15px;
+            height: auto;
+        }
+        
+        #mainbanner {
+            height: 600px;
+        }
+        
+        .mobilebanner {
+            background-position: 0px 10%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+
+    <!-- @media only screen and (max-width: 640px) 
+               {*/
+               -->
+    <style type="text/css">
+        @media only screen and (max-width: 640px) {
+            .header-img {
+                max-width: 100% !important;
+                height: auto;
+            }
+            body {
+                width: auto!important;
+            }
+            table[class=full] {
+                width: 100%!important;
+                clear: both;
+            }
+            table[class=mobile] {
+                width: 100%!important;
+                padding-left: 30px;
+                padding-right: 30px;
+                clear: both;
+            }
+            table[class=fullCenter] {
+                width: 100%!important;
+                text-align: center!important;
+                clear: both;
+            }
+            td[class=fullCenter] {
+                width: 100%!important;
+                text-align: center!important;
+                clear: both;
+            }
+            *[class=erase] {
+                display: none;
+            }
+            *[class=buttonScale] {
+                float: none!important;
+                text-align: center!important;
+                display: inline-block!important;
+                clear: both;
+            }
+            .image600 img {
+                width: 100%!important;
+            }
+            td[class=pad20] {
+                padding-left: 20px!important;
+                padding-right: 20px!important;
+                text-align: center!important;
+                clear: both;
+            }
+            td[class=h40] {
+                height: 40px!important;
+                clear: both;
+            }
+            *[class=h20] {
+                width: 100%!important;
+                height: 20px!important;
+            }
+            table[class=mcenter] {
+                text-align: center;
+                vertical-align: middle;
+                clear: both!important;
+                float: none;
+                margin: 0px!important;
+            }
+            #ring {
+                width: 50px!important;
+            }
+            .image600 img {
+                width: 100%!important;
+                height: auto!important;
+            }
+            .pic600 {
+                width: 100%!important;
+                height: auto!important;
+            }
+            /* .grow600 img{-webkit-transition:all 0s ease!important;-moz-transition:all 0s ease!important;-o-transition:all 0s ease!important;-ms-transition:all 0s ease!important;transition:all 0s ease!important;}
+            .grow600 img:hover{opacity:0.85!important;filter:alpha(opacity=85);} */
+            .pic270 {
+                width: 270px;
+                height: 203px;
+                overflow: hidden;
+            }
+            /* .grow270 img{width:270px;height:203px;
+            -webkit-transition:all 1.5s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;-ms-transition:all 1s ease;transition:all 1s ease;}
+            .grow270 img:hover{width:330px;height:240px;} */
+            .pic175 {
+                width: 175px;
+                height: 125px;
+                overflow: hidden;
+            }
+            .pic270 {
+                width: 270px;
+                height: 193px;
+                overflow: hidden;
+            }
+            /* .grow175 img{width:175px;height:125px;
+            -webkit-transition:all 1.5s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;-ms-transition:all 1s ease;transition:all 1s ease;}
+            .grow270 img{width:270px;height:139px;
+            -webkit-transition:all 1.5s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;-ms-transition:all 1s ease;transition:all 1s ease;}
+            .grow175 img:hover{width:215px;height:170px;}
+            .grow270 img:hover{width:300px;height:215px;} */
+        }
+    </style>
+    <!--
+    
+    @media only screen and (max-width: 479px) 
+               {
+               -->
+    <style type="text/css">
+        @media only screen and (max-width: 479px) {
+            .hide-sm {
+                display: none !important;
+            }
+            body {
+                width: auto!important;
+            }
+            table[class=full] {
+                width: 100%!important;
+                clear: both;
+            }
+            table[class=mobile] {
+                width: 100%!important;
+                padding-left: 20px;
+                padding-right: 20px;
+                clear: both;
+            }
+            table[class=fullCenter] {
+                width: 100%!important;
+                text-align: center!important;
+                clear: both;
+            }
+            td[class=fullCenter] {
+                width: 100%!important;
+                text-align: center!important;
+                clear: both;
+            }
+            *[class=erase] {
+                display: none;
+            }
+            *[class=buttonScale] {
+                float: none!important;
+                text-align: center!important;
+                display: inline-block!important;
+                clear: both;
+            }
+            .image600 img {
+                width: 100%!important;
+            }
+            .image300 img {
+                width: 100%!important;
+            }
+            td[class=pad20] {
+                padding-left: 20px!important;
+                padding-right: 20px!important;
+                text-align: center!important;
+                clear: both;
+            }
+            td[class=h40] {
+                height: 30px!important;
+                clear: both;
+            }
+            table[class=mcenter] {
+                text-align: center;
+                vertical-align: middle;
+                clear: both!important;
+                float: none;
+                margin: 0px!important;
+            }
+            *[class=h20] {
+                width: 100%!important;
+                height: 20px!important;
+            }
+            *[class=font50] {
+                font-size: 50px!important;
+                line-height: 58px!important;
+            }
+            #ring {
+                width: 50px!important;
+            }
+            .image600 img {
+                width: 100%!important;
+                height: auto!important;
+            }
+            .pic600 {
+                width: 100%!important;
+                height: auto!important;
+            }
+            .pic270 {
+                width: 270px;
+                height: 203px;
+                overflow: hidden;
+            }
+            .pic175 {
+                width: 175px;
+                height: 125px;
+                overflow: hidden;
+            }
+            .pic270 {
+                width: 270px;
+                height: 193px;
+                overflow: hidden;
+            }
+            /* .grow270 img{width:270px;height:203px;
+            -webkit-transition:all 1.5s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;-ms-transition:all 1s ease;transition:all 1s ease;}
+            .grow270 img:hover{width:330px;height:240px;}
+            .grow600 img{-webkit-transition:all 0s ease!important;-moz-transition:all 0s ease!important;-o-transition:all 0s ease!important;-ms-transition:all 0s ease!important;transition:all 0s ease!important;}
+            .grow600 img:hover{opacity:0.85!important;filter:alpha(opacity=85);}
+            .grow175 img{width:175px;height:125px;
+            -webkit-transition:all 1.5s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;-ms-transition:all 1s ease;transition:all 1s ease;}
+            .grow175 img:hover{width:215px;height:170px;} */
+            .l-md-c-sm {
+                text-align: center;
+                overflow: hidden;
+            }
+            img.res-img {
+                max-width: 70% !important;
+                height: auto;
+            }
+            .header-img {
+                display: block !important;
+                max-width: 128% !important;
+                height: auto;
+                margin-left: 30PX;
+            }
+            .mobilebanner {
+                background-image: url('https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/image/banner.jpg');
+                background-position: 50% 10%;
+                -webkit-background-size: 170%;
+                -moz-background-size: 170%;
+                -o-background-size: 170%;
+                background-size: 170%;
+            }
+            #mainbanner {
+                height: 200px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix">
+    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" align="left">
+
+                    <!-- Image 270px - 1 -->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                        <tbody>
+                            <tr>
+                                <td width="100%" align="right" class="l-md-c-sm" style="height: 29px;padding-right: 9px;">
+                                    <span style="display: block;"><div class=""><a href="http://sicobank.com/2h2020/2h2020-mailshot.html" style="color: grey;font-size: 13px;">
+							View this email in your browser 
+							<!-- <img src="https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/image/logo.jpg" width="85" alt="" border="0"> -->
+					</a></div></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="fullCenter">
+        <tbody>
+            <tr>
+
+                <td width="100%" align="left">
+
+
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                        <tbody>
+                            <tr>
+                                <td width="100%" align="left" class="l-md-c-sm">
+                                    <span style="display: block;"><div class=" "><a href="http://sicobank.com/2h2020/#">
+							<img class="header-img" src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/mainbanner.jpg" alt="" border="0">
+						
+							
+					</a></div></span>
+
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="30 "></td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#ffffff" style="background-color: rgb(255, 255, 255);">
+        <tbody>
+            <tr>
+                <td width="100%" valign="top" align="center">
+
+
+                    <!-- Wrapper -->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+
+
+
+
+                                    <!-- Wrapper -->
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                                        <tbody>
+                                            <tr>
+                                                <td width="100%" align="center">
+
+
+
+
+                                                    <!-- Space -->
+                                                    <!-- End Space -->
+
+                                                    <!-- Image 270px - 1 -->
+                                                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" align="center" class="image270">
+                                                                    <span style="display: block;"><div class="grow270 pic270"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/prime-minister-thumb.jpg" width="270" alt="" border="0" class="hover"></div></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td valign="middle" width="100%" style="text-align: left;font-family: Arial, Helvetica, sans-serif;font-size: 18px;color: #212528;line-height: 24px;font-weight: bold;height: 60px;vertical-align: top;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: Arial,'Times New Roman',Times,serif; font-weight: 700;"><!--<![endif]-->Our Sincere Condolences<!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td width="100%" height="13" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+
+                                                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]--><!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" align="center">
+
+                                                                    <!-- SORTABLE -->
+                                                                    <div class="sortable_inner ui-sortable">
+
+                                                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="mcenter" object="drag-module-small">
+                                                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                                                    <td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);" class="fullCenter">
+
+                                                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+																<a href="http://sicobank.com/2h2020/Condolences-to-the-Leadership.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+															<!--[if !mso]><!--></span>
+                                                                                        <!--<![endif]-->
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    </div>
+
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <!-- Space -->
+                                                    <table width="25" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" height="50" style="font-size: 1px; line-height: 1px;"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- End Space -->
+
+                                                    <!-- Image 270px - 2 -->
+                                                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" align="center" class="image270">
+                                                                    <span style="display: block;"><div class="grow270 pic270"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/Crown-prince.jpg" width="270" alt="" border="0" class="hover"></div></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td valign="middle" width="100%" style="text-align: left;font-family: Arial, Helvetica, sans-serif;font-size: 18px;color: #212528;line-height: 24px;font-weight: bold;height: 72px;vertical-align: top;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: Arial,'Times New Roman',Times,serif; font-weight: 700;"><!--<![endif]-->Congratulations to Sheikh Salman bin Hamad Al Khalifa<!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td width="100%" height="13" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+
+                                                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]--><!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="8" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" align="center">
+
+                                                                    <!-- SORTABLE -->
+                                                                    <div class="sortable_inner ui-sortable">
+
+                                                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="mcenter" object="drag-module-small">
+                                                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                                                    <td align="left" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+																<a href="http://sicobank.com/2h2020/crown-prince.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+															<!--[if !mso]><!--></span>
+                                                                                        <!--<![endif]-->
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    </div>
+
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- End Wrapper -->
+
+
+
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End Wrapper -->
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="30 "></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#ffffff" style="background-color: rgb(255, 255, 255);">
+        <tbody>
+            <tr>
+                <td width="100%" valign="top" align="center">
+
+
+                    <!-- Wrapper -->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+
+
+
+
+                                    <!-- Wrapper -->
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                                        <tbody>
+                                            <tr>
+                                                <td width="100%" align="center">
+
+
+
+
+                                                    <!-- Space -->
+                                                    <!-- End Space -->
+
+                                                    <!-- Image 270px - 1 -->
+                                                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" align="center" class="image270">
+                                                                    <span style="display: block;"><div class="grow270 pic270"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/najla.jpg" width="270" alt="" border="0" class="hover"></div></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #212528; line-height: 24px; font-weight: bold;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: Arial,'Times New Roman',Times,serif; font-weight: 700;" title="Adapting to New Realities"><!--<![endif]-->Note from the CEO<!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td width="100%" height="13" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td valign="middle" width="100%" style="text-align: left;font-family: Arial, Helvetica, sans-serif;font-size: 14px;color: #979797;line-height: 24px;height: 120px;font-weight: normal;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]-->SICO CEO Najla Al-Shirawi reflects on a year unlike any other. <!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" align="center">
+
+                                                                    <!-- SORTABLE -->
+                                                                    <div class="sortable_inner ui-sortable">
+
+                                                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="mcenter" object="drag-module-small">
+                                                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                                                    <td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);" class="fullCenter">
+
+                                                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+																<a href="http://sicobank.com/2h2020/Note-from-the-CEO.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read more</a>
+															<!--[if !mso]><!--></span>
+                                                                                        <!--<![endif]-->
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    </div>
+
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <!-- Space -->
+                                                    <table width="25" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" height="50" style="font-size: 1px; line-height: 1px;"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- End Space -->
+
+                                                    <!-- Image 270px - 2 -->
+                                                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" align="center" class="image270">
+                                                                    <span style="display: block;"><div class="grow270 pic270"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/finance-thumb.jpg" width="270" alt="" border="0" class="hover"></div></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 18px; color: #212528; line-height: 24px; font-weight: bold;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: Arial,'Times New Roman',Times,serif; font-weight: 700;" title="Financial Results"><!--<![endif]-->Third Quarter Financial Results<!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td width="100%" height="13" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px;height:110px; font-weight: normal;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]-->SICO recorded a consolidated net profit for the first nine months of 2020 amounting to BD 1.7 million, a decrease of 52% from BD 3.6 million recorded in the corresponding period of 2019.
+  <!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" align="center">
+
+                                                                    <!-- SORTABLE -->
+                                                                    <div class="sortable_inner ui-sortable">
+
+                                                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="mcenter" object="drag-module-small">
+                                                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                                                    <td align="left" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+																<a href="http://sicobank.com/2h2020/3Q2020-Financial-Results.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read more</a>
+															<!--[if !mso]><!--></span>
+                                                                                        <!--<![endif]-->
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    </div>
+
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- End Wrapper -->
+
+
+
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End Wrapper -->
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="40 "></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" align="center">
+
+                    <!-- Headline -->
+                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                        <tbody>
+
+
+
+
+
+
+                            <tr>
+
+
+                                <td width="100%" align="left" class="" style="line-height: 1px;">
+                                    <span style="display: block;"><div class="grow600 "><a href="http://sicobank.com/2h2020/New-Board-Appointments.html" target="_blank">
+
+
+<img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/New-Appointments/all.jpg" editable="" width="600" alt="" border="0" class="hover">
+</a>
+                           
+                        </div></span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td width="100%" style="height: 20px">
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;" class="fullCenter">
+                                    <!--[if !mso]><!-->
+                                    <a href="http://sicobank.com/2h2020/New-Board-Appointments.html" style="text-decoration: none;color: #1e2d44;"> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;text-decoration: none;"><!--<![endif]-->New Board Appointments<!--[if !mso]><!--></span></a>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]-->SICO has had a number of changes to its board of directors, including three female board members.<br><!--[if !mso]><!--></span>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="100%" align="left" class="buttonScale">
+
+                                    <!-- SORTABLE -->
+                                    <div class="sortable_inner ui-sortable">
+
+
+                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="buttonScale" object="drag-module-small">
+                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                    <td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+                                        <a href="http://sicobank.com/2h2020/New-Board-Appointments.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+                                    <!--[if !mso]><!--></span>
+                                                        <!--<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="40 "></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" align="center">
+
+                    <!-- Headline -->
+                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                        <tbody>
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: center;font-family: Arial, Helvetica, sans-serif;font-size: 28px;color: #212528;line-height: 28px;font-weight: bold;" class="fullCenter">
+                                    <!--[if !mso]><!-->
+                                    <a href="http://sicobank.com/2h2020/News-Highlights.html" style="text-decoration: none;color: #1e2d44;"> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;text-decoration: none;"><!--<![endif]-->News Highlights<!--[if !mso]><!--></span></a>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" style="height: 20px">
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+
+                                <td width="100%" align="center" class="image600" style="line-height: 1px;">
+                                    <span style="display: block;"><div class="grow600 pic600"><a href="http://sicobank.com/2h2020/https://www.sicobank.com/MailShot/NewsHighlights.html " target="_blank"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/News-Highlights.jpg" editable="" width="600" alt="" border="0" class="hover"></a>
+                           
+                        </div></span>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td width="100%" style="height: 20px">
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;" class="fullCenter">
+                                    <!--[if !mso]><!-->
+                                    <a href="http://sicobank.com/2h2020/#/" style="text-decoration: none;color: #1e2d44;"> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;text-decoration: none;"><!--<![endif]-->SICO Signs Agreement to Acquire Majority Stake in Saudi-based Muscat Capital<!--[if !mso]><!--></span></a>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]--> SICO Solidifies Saudi Presence with Muscat Capital Acquisition
+SICO announced the signing of a landmark agreement with Bank Muscat SAOG to acquire a majority stakein Saudi-based Muscat Capital, a wholly owned subsidiary of Bank Muscat.<br><!--[if !mso]><!--></span>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="100%" align="left" class="buttonScale">
+
+                                    <!-- SORTABLE -->
+                                    <div class="sortable_inner ui-sortable">
+
+
+                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="buttonScale" object="drag-module-small">
+                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                    <td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+                                        <a href="http://sicobank.com/2h2020/News-Highlights.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+                                    <!--[if !mso]><!--></span>
+                                                        <!--<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="40 "></td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#ffffff" style="background-color: rgb(255, 255, 255);">
+        <tbody>
+            <tr>
+                <td width="100%" valign="top" align="center">
+
+
+                    <!-- Wrapper -->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+
+
+
+
+                                    <!-- Wrapper -->
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                                        <tbody>
+                                            <tr>
+                                                <td width="100%" align="center">
+
+
+
+
+                                                    <!-- Space -->
+                                                    <!-- End Space -->
+
+                                                    <!-- Image 270px - 1 -->
+                                                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" align="center" class="image270">
+                                                                    <span style="display: block;"><div class="grow270 pic270"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/News-Highlights/2s.jpg" width="270" alt="" border="0" class="hover"></div></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td valign="middle" width="100%" style="text-align: left;font-family: Arial, Helvetica, sans-serif;font-size: 18px;color: #212528;line-height: 24px;font-weight: bold;height: 60px;vertical-align: top;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: Arial,'Times New Roman',Times,serif; font-weight: 700;"><!--<![endif]-->SICO Research Begins Providing ESG data on Companies Under Coverage<!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td width="100%" height="13" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+
+                                                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]--><!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" align="center">
+
+                                                                    <!-- SORTABLE -->
+                                                                    <div class="sortable_inner ui-sortable">
+
+                                                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="mcenter" object="drag-module-small">
+                                                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                                                    <td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);" class="fullCenter">
+
+                                                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+																<a href="http://sicobank.com/2h2020/News-Highlights.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+															<!--[if !mso]><!--></span>
+                                                                                        <!--<![endif]-->
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    </div>
+
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <!-- Space -->
+                                                    <table width="25" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" height="50" style="font-size: 1px; line-height: 1px;"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- End Space -->
+
+                                                    <!-- Image 270px - 2 -->
+                                                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" align="center" class="image270">
+                                                                    <span style="display: block;"><div class="grow270 pic270"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/News-Highlights/3s.jpg" width="270" alt="" border="0" class="hover"></div></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td valign="middle" width="100%" style="text-align: left;font-family: Arial, Helvetica, sans-serif;font-size: 18px;color: #212528;line-height: 24px;font-weight: bold;height: 72px;vertical-align: top;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: Arial,'Times New Roman',Times,serif; font-weight: 700;"><!--<![endif]-->SICO Launches New Global Trading Platform<!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td width="100%" height="13" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+
+                                                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]--><!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" align="center">
+
+                                                                    <!-- SORTABLE -->
+                                                                    <div class="sortable_inner ui-sortable">
+
+                                                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="mcenter" object="drag-module-small">
+                                                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                                                    <td align="left" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+																<a href="http://sicobank.com/2h2020/News-Highlights.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+															<!--[if !mso]><!--></span>
+                                                                                        <!--<![endif]-->
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    </div>
+
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- End Wrapper -->
+
+
+
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End Wrapper -->
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="40 "></td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#ffffff" style="background-color: rgb(255, 255, 255);">
+        <tbody>
+            <tr>
+                <td width="100%" valign="top" align="center">
+
+
+                    <!-- Wrapper -->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+
+
+
+
+                                    <!-- Wrapper -->
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                                        <tbody>
+                                            <tr>
+                                                <td width="100%" align="center">
+
+
+
+
+                                                    <!-- Space -->
+                                                    <!-- End Space -->
+
+                                                    <!-- Image 270px - 1 -->
+                                                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" align="center" class="image270">
+                                                                    <span style="display: block;"><div class="grow270 pic270"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/News-Highlights/5s.jpg" width="270" alt="" border="0" class="hover"></div></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td valign="middle" width="100%" style="text-align: left;font-family: Arial, Helvetica, sans-serif;font-size: 18px;color: #212528;line-height: 24px;font-weight: bold;height: 50px;vertical-align: top;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: Arial,'Times New Roman',Times,serif; font-weight: 700;"><!--<![endif]-->SICO Begins Offering Murabaha Sukuk Service
+
+<!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td width="100%" height="13" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+
+                                                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]--><!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" align="center">
+
+                                                                    <!-- SORTABLE -->
+                                                                    <div class="sortable_inner ui-sortable">
+
+                                                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="mcenter" object="drag-module-small">
+                                                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                                                    <td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);" class="fullCenter">
+
+                                                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+																<a href="http://sicobank.com/2h2020/News-Highlights.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+															<!--[if !mso]><!--></span>
+                                                                                        <!--<![endif]-->
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    </div>
+
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <!-- Space -->
+                                                    <table width="25" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" height="50" style="font-size: 1px; line-height: 1px;"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- End Space -->
+
+                                                    <!-- Image 270px - 2 -->
+                                                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" align="center" class="image270">
+                                                                    <span style="display: block;"><div class="grow270 pic270"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/News-Highlights/8s.jpg" width="270" alt="" border="0" class="hover"></div></span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+                                                                <td valign="middle" width="100%" style="text-align: left;font-family: Arial, Helvetica, sans-serif;font-size: 18px;color: #212528;line-height: 24px;font-weight: bold;height: 50px;vertical-align: top;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: Arial,'Times New Roman',Times,serif; font-weight: 700;"><!--<![endif]-->SICO Funds Continue to Outperform the Market<!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td width="100%" height="13" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+
+
+                                                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]--><!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" align="center">
+
+                                                                    <!-- SORTABLE -->
+                                                                    <div class="sortable_inner ui-sortable">
+
+                                                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="mcenter" object="drag-module-small">
+                                                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                                                    <td align="left" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+																<a href="http://sicobank.com/2h2020/News-Highlights.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+															<!--[if !mso]><!--></span>
+                                                                                        <!--<![endif]-->
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    </div>
+
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- End Wrapper -->
+
+
+
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End Wrapper -->
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="40 "></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#ffffff" style="background-color: rgb(255, 255, 255);">
+        <tbody>
+            <tr>
+                <td width="100%" valign="top" align="center">
+
+
+                    <!-- Wrapper -->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+
+
+
+
+                                    <!-- Wrapper -->
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                                        <tbody>
+                                            <tr>
+                                                <td width="100%" align="center">
+
+                                                    <!-- Image 270px - 1 -->
+                                                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" align="center" class="image270">
+                                                                    <span style="display: block;"><div class="grow270 pic270"><a href="http://sicobank.com/2h2020/#"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/wisam.jpg" width="270" alt="" border="0" class="hover"></a></div></span>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+
+
+                                                    <!-- Text Right -->
+                                                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;"><!--<![endif]-->Privatizing Government Assets Across the Region<!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #979797; line-height: 22px;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]-->SICO’s Head of Investment Banking and Real Estate, Wissam Haddad, makes the case for privatizing government assets in the GCC.<!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" align="center">
+
+                                                                    <!-- SORTABLE -->
+                                                                    <div class="sortable_inner ui-sortable">
+
+                                                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="buttonScale" object="drag-module-small">
+                                                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                                                    <td align="left" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+																<a href="http://sicobank.com/2h2020/viewpoint.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read more</a>
+															<!--[if !mso]><!--></span>
+                                                                                        <!--<![endif]-->
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    </div>
+
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- End Wrapper -->
+
+
+
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End Wrapper -->
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="30 "></td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" align="center">
+
+                    <!-- Image 270px - 1 -->
+                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                        <tbody>
+                            <tr>
+                                <td width="100%" align="center" class="image270">
+                                    <span style="display: block;"><div class="grow270 pic270"><a href="http://sicobank.com/2h2020/#"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/Nishit-thumb.jpg" width="270" alt="" border="0" class="hover"></a></div></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Space -->
+                    <table width="1" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
+                        <tbody>
+                            <tr>
+                                <td width="100%" height="35" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End Space -->
+
+                    <!-- Text Right -->
+                    <table width="270" border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                        <tbody>
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;" class="fullCenter">
+                                    <!--[if !mso]><!--><span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;"><!--<![endif]-->Investing in the Midst of a Global Pandemic - an Equity Perspective<!--[if !mso]><!--></span>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #979797; line-height: 22px;" class="fullCenter">
+                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]-->SICO’s Head of Research, Nishit Lakhotia, offers insight into investing amid a pandemic.<!--[if !mso]><!--></span>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="100%" align="center">
+
+                                    <!-- SORTABLE -->
+                                    <div class="sortable_inner ui-sortable">
+
+                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="buttonScale" object="drag-module-small">
+                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                    <td align="left" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+										<a href="http://sicobank.com/2h2020/research.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read more</a>
+									<!--[if !mso]><!--></span>
+                                                        <!--<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="40 "></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" align="center">
+
+                    <!-- Headline -->
+                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                        <tbody>
+                            <tr>
+
+
+                                <td width="100%" align="center" class="image600" style="line-height: 1px;">
+                                    <span style="display: block;"><div class="grow600 pic600"><a href="http://sicobank.com/2h2020/#/ " target="_blank"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/qa-banner.jpg" editable="" width="600" alt="" border="0" class="hover"></a>
+                           
+                        </div></span>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td width="100%" style="height: 20px">
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;" class="fullCenter">
+                                    <!--[if !mso]><!-->
+                                    <a href="http://sicobank.com/2h2020/#/" style="text-decoration: none;color: #1e2d44;"> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;text-decoration: none;"><!--<![endif]-->Q&amp;A with Mohamed Ibrahim<!--[if !mso]><!--></span></a>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]-->Mohamed Ibrahim, SICO’s Head of IT discusses the importance of digitalization during the pandemic and SICO’s technological capabilities in this interview.<br><!--[if !mso]><!--></span>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="100%" align="left" class="buttonScale">
+
+                                    <!-- SORTABLE -->
+                                    <div class="sortable_inner ui-sortable">
+
+
+                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="buttonScale" object="drag-module-small">
+                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                    <td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+                                        <a href="http://sicobank.com/2h2020/qa.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+                                    <!--[if !mso]><!--></span>
+                                                        <!--<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="30 "></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#212528" style="background-color: rgb(30, 45, 68); border-color: rgb(30, 45, 68);">
+        <tbody>
+            <tr>
+                <td align="center" style="background-image: url('http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/award-bann.jpg');background-position: center top;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-position: center;background-repeat: no-repeat;"
+                    id="sep2">
+
+
+                    <!--[if gte mso 9]> 
+      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:600;">
+        <v:fill type="tile" src="https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/image/award.jpg" id="sep2Change_outlook" class="stay" />
+        <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+      <![endif]-->
+                    <div>
+
+                        <!-- Wrapper -->
+                        <table class="mobile" align="center" border="0" width="100%" cellpadding="0" cellspacing="0">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+
+                                        <!-- Wrapper -->
+                                        <table class="full" align="center" border="0" width="600" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="100%" align="center">
+
+                                                        <!-- Text -->
+                                                        <table width="550" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td height="45" width="100%">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td valign="top" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #ffffff; line-height: 28px; font-weight: bold; word-break: break-word;" class="fullCenter">
+                                                                        <!--[if !mso]><!--><span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;"><!--<![endif]-->2020 Awards<!--[if !mso]><!--></span>
+                                                                        <!--<![endif]-->
+                                                                    </td>
+                                                                </tr>
+
+
+
+
+                                                                <tr>
+                                                                    <td style="color: #ffffff;text-align: center;font-family: Helvetica,Arial,sans-serif;line-height: 22px;font-weight: bold;vertical-align: top;font-size: 14px;padding-top: 3px;word-break: break-word;" class="">
+
+                                                                        <!--[if !mso]><!--><br>
+                                                                        <span style="font-family: Helvetica, Arial, sans-serif;font-weight: bold;font-size: 17px;"><!--<![endif]-->In 2020, SICO received a number of accolades attesting to the strength of its operations, diversity of its services, and dedication of its team. <br><!--[if !mso]><!--></span>
+                                                                        <!--<![endif]-->
+
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="25" width="100%">
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="100%" align="center">
+
+                                                                        <!-- SORTABLE -->
+
+                                                                        <div class="sortable_inner ui-sortable">
+
+                                                                            <table border="0" cellpadding="0" cellspacing="0" align="center" class="buttonScale" object="drag-module-small">
+                                                                                <tbody style="border-color: rgb(116, 145, 177);">
+                                                                                    <tr style="border-color: rgb(116, 145, 177);">
+                                                                                        <td align="left" height="32" style="padding-left: 15px;padding-right: 15px;font-weight: bold;font-family: Helvetica, Arial, sans-serif;color: white;text-transform: uppercase;border: 2px solid rgb(255, 255, 255);background: rgba(255, 255, 255, 0.2);">
+
+                                                                                            <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+																<a href="http://sicobank.com/2h2020/Awards.html" style="color: white;font-size: 12px;text-decoration: none;line-height: 32px;width: 100%;border-color: white;">Read more</a>
+															<!--[if !mso]><!--></span>
+                                                                                            <!--<![endif]-->
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+
+                                                                        </div>
+
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="45" width="100%">
+                                                                    </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- End Wrapper -->
+
+                    </div>
+                    <!--[if gte mso 9.]>
+        </v:textbox>
+       </v:fill></v:rect>
+       <![endif]-->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="60 "></td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" align="center">
+
+                    <!-- Headline -->
+                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                        <tbody>
+
+
+
+
+
+
+                            <tr>
+
+
+                                <td width="100%" align="left" class="" style="line-height: 1px;">
+                                    <span style="display: block;"><div class="grow600 "><a href="http://sicobank.com/2h2020/New-Appointments.html " target="_blank"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/New-Appointments/Khaled-A-Zainalabedin.jpg" editable="" width="160" alt="" border="0" class="hover"></a>
+                           
+                        </div></span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td width="100%" style="height: 20px">
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;" class="fullCenter">
+                                    <!--[if !mso]><!-->
+                                    <a href="http://sicobank.com/2h2020/New-Appointments.html" style="text-decoration: none;color: #1e2d44;"> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;text-decoration: none;"><!--<![endif]-->New Appointments<!--[if !mso]><!--></span></a>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]-->SICO has appointed a new Acting Head of Distribution and Business Development to its management team.<br><!--[if !mso]><!--></span>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="100%" align="left" class="buttonScale">
+
+                                    <!-- SORTABLE -->
+                                    <div class="sortable_inner ui-sortable">
+
+
+                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="buttonScale" object="drag-module-small">
+                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                    <td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+                                        <a href="http://sicobank.com/2h2020/New-Appointments.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+                                    <!--[if !mso]><!--></span>
+                                                        <!--<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="60 "></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" align="center">
+
+                    <!-- Headline -->
+                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                        <tbody>
+                            <tr>
+
+
+                                <td width="100%" align="center" class="image600" style="line-height: 1px;">
+                                    <span style="display: block;"><div class="grow600 pic600"><a href="http://sicobank.com/2h2020/#/" target="_blank"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/events/sico-webinar.jpg" editable="" width="600" alt="" border="0" class="hover"></a>
+                           
+                        </div></span>
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr>
+                                <td width="100%" style="height: 20px">
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;" class="fullCenter">
+                                    <!--[if !mso]><!-->
+                                    <a href="http://sicobank.com/2h2020/https://www.sicobank.com/MailShot/events.html" style="text-decoration: none;color: #1e2d44;"> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;text-decoration: none;"><!--<![endif]-->Events and Conferences<!--[if !mso]><!--></span></a>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]-->Throughout the year, SICO sponsored a number of online webinars, offering insights from its team.<br><!--[if !mso]><!--></span>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="100%" align="left" class="buttonScale">
+
+                                    <!-- SORTABLE -->
+                                    <div class="sortable_inner ui-sortable">
+
+
+                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="buttonScale" object="drag-module-small">
+                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                    <td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+                                        <a href="http://sicobank.com/2h2020/events.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+                                    <!--[if !mso]><!--></span>
+                                                        <!--<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="60 "></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" align="center">
+
+                    <!-- Headline -->
+                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                        <tbody>
+
+
+
+
+
+
+                            <tr>
+
+
+                                <td width="100%" align="center" class="image600" style="line-height: 1px;">
+                                    <span style="display: block;"><div class="grow600 pic600"><a href="http://sicobank.com/2h2020/#/" target="_blank"><img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/esg-bann.jpg" editable="" width="600" alt="" border="0" class="hover"></a>
+                           
+                        </div></span>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td width="100%" style="height: 20px">
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;" class="fullCenter">
+                                    <!--[if !mso]><!-->
+                                    <a href="http://sicobank.com/2h2020/#/" style="text-decoration: none;color: #1e2d44;"> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;text-decoration: none;"><!--<![endif]-->ESG<!--[if !mso]><!--></span></a>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="5" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #979797; line-height: 24px; font-weight: normal;" class="fullCenter">
+                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]-->SICO seeks to create value not just for shareholders, but for all of stakeholders, which include our clients, our partners, our employees, and the community at large. Accordingly, the bank has embarked on a number of initiatives to support local communities.<br><!--[if !mso]><!--></span>
+                                    <!--<![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td width="100%" align="left" class="buttonScale">
+
+                                    <!-- SORTABLE -->
+                                    <div class="sortable_inner ui-sortable">
+
+
+                                        <table border="0" cellpadding="0" cellspacing="0" align="left" class="buttonScale" object="drag-module-small">
+                                            <tbody style="border-color: rgb(116, 145, 177);">
+                                                <tr style="border-color: rgb(116, 145, 177);">
+                                                    <td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+
+                                                        <!--[if !mso]><!--><span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);"><!--<![endif]--> 
+                                        <a href="http://sicobank.com/2h2020/ESG.html" style="color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read More</a>
+                                    <!--[if !mso]><!--></span>
+                                                        <!--<![endif]-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td width="100%" height="60 "></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+        <tbody>
+            <tr>
+                <td align="center">
+
+                    <!-- Wrapper -->
+                    <table class="mobile" align="center" border="0" width="600" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+
+                                    <!-- Start Icons -->
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full" object="drag-module-small">
+                                        <tbody>
+
+                                            <tr>
+                                                <td width="100%" height="60" valign="middle" align="left">
+
+                                                    <!-- Icons -->
+                                                    <p style="color: #1e2d44;font-size: 20px;font-family: 'proxima_nova_rgregular', Helvetica;padding-left: 9px !important;">Get Socialized </p>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="100%" valign="middle" align="left">
+
+                                                    <!-- Icons -->
+                                                    <table width="150" border="0" cellpadding="0" cellspacing="0" align="left" style="text-align: center; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="buttonScale">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td height="40" valign="middle" align="left" width="31">
+                                                                    <a href="http://sicobank.com/2h2020/https://www.instagram.com/sico_bank/" style="text-decoration: none;">
+                                                                        <img src="https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/image/social-icons/instagram-color.png" width="45" alt="" border="0">
+                                                                    </a>
+                                                                </td>
+                                                                <td height="40" valign="middle" align="left" width="31">
+                                                                    <a href="http://sicobank.com/2h2020/https://www.linkedin.com/company/sico-bsc-c" style="text-decoration: none;">
+                                                                        <img src="https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/image/social-icons/linkedin-color.png" width="45" alt="" border="0">
+                                                                    </a>
+                                                                </td>
+                                                                <td height="40" valign="middle" align="left" width="31">
+                                                                    <a href="http://sicobank.com/2h2020/https://twitter.com/SICOBANK" style="text-decoration: none;">
+                                                                        <img src="https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/image/social-icons/twitter-color.png" width="45" alt="" border="0">
+                                                                    </a>
+                                                                </td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="100%" height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- End Icons -->
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#ffffff" style="background-color: rgb(30, 45, 68);">
+        <tbody>
+            <tr>
+                <td width="100%" valign="top" align="center">
+
+
+                    <!-- Wrapper -->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+                        <tbody>
+                            <tr>
+                                <td align="center" style="background-image: url('https://sicobank.com/Themes/Default/img/backgrounds/footer-pattern-white.svg');background-position: center top;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-position: 237px 15%;background-repeat: no-repeat;">
+
+                                    <!-- Space -->
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                                        <tbody>
+                                            <tr>
+                                                <td width="100%" height="25"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- End Space -->
+
+                                    <!-- Wrapper -->
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                                        <tbody>
+                                            <tr>
+                                                <td width="100%" align="center">
+
+                                                    <!-- Text Left -->
+                                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td valign="middle" width="100%" style="text-align: center;font-family: Helvetica, Arial, sans-serif;font-size: 12px;color: #ffffff;line-height: 22px;padding: 0 50px;" class="fullCenter">
+                                                                    <!--[if !mso]><!--><span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]-->SICO BSC(c), licensed as a conventional wholesale bank by the CBB, P.O.Box 1331, BMB Centre, Diplomatic Area, Manama, Kingdom of Bahrain, T: +973 1751 5000, F: +973 1751 4000 sicobank.com
+
+<!--[if !mso]><!--></span>
+                                                                    <!--<![endif]-->
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <!-- Space -->
+                                                    <table width="1" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!-- End Space -->
+
+
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- End Wrapper -->
+
+                                    <!-- Space -->
+                                    <!-- End Space -->
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End Wrapper -->
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+    <style type="text/css">
+        .pic175 {
+            width: 175px;
+            height: 125px;
+            overflow: hidden;
+        }
+        /* .grow175 img{width:175px;height:125px;
+		-webkit-transition:all 1.5s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;-ms-transition:all 1s ease;transition:all 1s ease;}
+		.grow175 img:hover{width:215px;height:170px;} */
+        
+        .pic600 {
+            width: 600px;
+            height: 300px;
+            overflow: hidden;
+        }
+        /* .grow600 img{width:600px;height:300px;
+		-webkit-transition:all 1.5s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;-ms-transition:all 1s ease;transition:all 1s ease;}
+		.grow600 img:hover{width:660px;height:350px;} */
+        
+        .pic270 {
+            width: 270px;
+            height: 203px;
+            overflow: hidden;
+        }
+        /* .grow270 img{width:270px;height:203px;
+		-webkit-transition:all 1.5s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;-ms-transition:all 1s ease;transition:all 1s ease;}
+		.grow270 img:hover{width:330px;height:240px;} */
+    </style>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

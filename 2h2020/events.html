@@ -1,0 +1,427 @@
+
+    <!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sicobank.com/Themes/Default/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://sicobank.com/Themes/Default/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://sicobank.com/Themes/Default/img/favicons/favicon-16x16.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+
+        <title>
+            Events and Conferences
+        </title>
+        <style>
+            @font-face {
+                font-family: 'Scuba Offc';
+                src: url(https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/fonts/subset-ScubaOffc-Medium.woff2) format("woff2"), url(https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/fonts/subset-ScubaOffc-Medium.woff) format("woff");
+                font-weight: 500;
+                font-style: normal
+            }
+            
+            @font-face {
+                font-family: 'Scuba Offc';
+                src: url(https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/fonts/subset-ScubaOffc-Light.woff2) format("woff2"), url(https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/fonts/subset-ScubaOffc-Light.woff) format("woff");
+                font-weight: 300;
+                font-style: normal
+            }
+            
+            @font-face {
+                font-family: 'Trola Text';
+                src: url(https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/fonts/TrolaText-Light.woff2) format("woff2"), url(https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/fonts/TrolaText-Light.woff) format("woff");
+                font-weight: 300;
+                font-style: normal
+            }
+            
+            @font-face {
+                font-family: 'Trola Text';
+                src: url(https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/fonts/TrolaText-Bold.woff2) format("woff2"), url(https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/fonts/TrolaText-Bold.woff) format("woff");
+                font-weight: 700;
+                font-style: normal
+            }
+            
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Trola Text", Georgia, "Times New Roman", Times, serif;
+                font-weight: 300;
+            }
+            
+            p,
+            a,
+            span {
+                font-family: "Scuba Offc", Helvetica, Arial, sans-serif;
+                font-weight: 300;
+            }
+            
+            body {
+                background-color: #f7f7f7;
+            }
+            
+            h2 {
+                margin-bottom: 20px;
+            }
+            
+            .container {
+                background: white;
+                padding: 0 30px;
+            }
+            
+            .banner {
+                position: relative;
+                background-image: url();
+                height: 500px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin: 0 -30px;
+            }
+            
+            .banner img {
+                position: absolute;
+                left: 5%;
+            }
+            
+            h1.title {
+                position: absolute;
+                z-index: 1;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+            }
+            
+            p {
+                color: #4f5052;
+                font-size: 17px;
+                text-align: justify;
+            }
+            
+            footer p {
+                text-align: center;
+                color: white;
+                padding: 22px 10px;
+                font-size: 12px;
+                width: 600px;
+                margin: auto;
+            }
+            
+            footer {
+                background: #23334c;
+                text-align: center;
+                margin-top: 20px;
+            }
+            
+            .modal-dialog {
+                max-width: 900px;
+            }
+            
+            .sidebar {
+                background: #23334c;
+                width: 100%;
+                min-height: 100vh;
+                height: 100%;
+                right: -24px;
+                position: relative;
+                padding-top: 55%;
+                padding-left: 15px;
+                background-image: url(https://sicobank.com/Themes/Default/img/backgrounds/footer-pattern-white.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
+            .sidebar a {
+                color: #cce3ff;
+                transition: all 0.5s;
+            }
+            
+            .sidebar a:hover {
+                color: white;
+                text-decoration: none;
+            }
+            
+            li.active {
+                margin: 15px 4px 15px -15px;
+                background: white;
+                padding: 15px;
+            }
+            
+            li.active a,
+            li.active a:hover {
+                color: #23334c;
+            }
+            
+            ul.list-unstyled {
+                background: linear-gradient(#23334c, #23334c00);
+                height: 100%;
+                margin-left: -15px;
+                padding-left: 15px;
+            }
+            
+            ul.list-unstyled li {
+                margin-bottom: 15px;
+            }
+            
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+
+</head>
+
+<body>
+
+    <div class="container" style="min-height: 100vh;">
+
+        <div class="row">
+            <div class="col-lg-9 col-lg-9 pl-md-5 pr-md-5">
+                
+    <nav class="navbar navbar-expand-lg navbar-light pl-0 pr-0">
+        <a class="navbar-brand" href="2h2020-mailshot.html">
+            <img src="https://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/image/innerlogo.jpg" alt="" class="" width="280">
+
+
+
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto d-lg-none">
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="Condolences-to-the-Leadership.html">
+                            Our Sincere Condolences
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="crown-prince.html">
+                            Congratulations to Sheikh Salman bin Hamad Al Khalifa
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Note-from-the-CEO.html">
+                            Note from the CEO
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="3Q2020-Financial-Results.html">
+                            Third Quarter Financial Results
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="New-Board-Appointments.html">
+                            New Board Appointments
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="News-Highlights.html">
+                            News Highlights
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="viewpoint.html">
+                            Privatizing Government Assets Across the Region
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html">
+                            Investing in the Midst of a Global Pandemic - an Equity Perspective
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="qa.html">
+                            Q&amp;A: Mohamed Ibrahim
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Awards.html">
+                            2020 Awards
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="New-Appointments.html">
+                            New Appointments
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">
+                            Events and Conferences
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="ESG.html">
+                            ESG
+                        </a>
+                    </li>
+                    
+            </ul>
+
+        </div>
+        <img src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/innerlogo-right.jpg" alt="" class="float-right" width="120">
+    </nav>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>
+                    Events and Conferences
+                </h2>
+                <div class="video-panel">
+                    <iframe width="736" height="500" src="https://www.youtube.com/embed/ieFCyCSSuK8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h5> SICO Webinar</h5>
+
+                <p>SICO organized a webinar held on July 22, titled &lsquo;GCC Markets: Investment Themes &amp; Market Dynamics in the Time of COVID&rsquo;. Participating in the webinar, which was hosted by Dalma Capital Founder and CEO Zachary Cefaratti,
+                    were SICO&rsquo;s Najla Al-Shirawi, CEO and Nishit Lakhotia, Head of Research. In attendance were 380 individuals, including investors, business owners and finance professionals, among others. The webinar discussed varying outlooks
+                    on investing and GCC market dynamics during these unprecedented times.</p>
+
+                <p>During the webinar, Al-Shirawi highlighted the importance of agility and resilience for asset managers to successfully navigate the volatility onset by the spread of the COVID-19 pandemic. She further stressed the importance of asset managers
+                    needing to quickly adapt to changes, respond swiftly to their clients&rsquo; needs, and efficiently manage liquidity and costs in order to succeed during this period. &ldquo;The crisis has impacted different sectors and asset classes
+                    in different ways, which has required investors to be more active in order to assess gaps in the market and capture more lucrative opportunities,&rdquo; said Lakhotia. &ldquo;This has resulted in investors willing to invest with higher
+                    premiums in guaranteed sectors or accept lower than normal returns during this time in favor of certainty.&rdquo; &ldquo;Active management is able to add value to GCC markets as investors are exposed through local funds,&rdquo; added
+                    Al-Shirawi. &ldquo;By adopting an active and research-oriented approach, fund managers are able to avoid hard-hit sectors and instead adjust their model in order to maintain their competitive edge as well as the quality of their portfolios.&rdquo;</p>
+                <iframe width="736" height="500" src="https://www.youtube.com/embed/GFWS3u1rl5w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h5> Bahrain Bourse ESG Interview</h5>
+
+                <p>In his interview with the Bahrain Bourse, SICO&rsquo;s Chief Capital Markets Officer, Fadhel Makhlooq, discussed the increasing relevance of ESG performance across the financial services industry, as millennials, who account for an ever-growing
+                    percentage of investors and the workforce, increasingly emphasize the importance of environmental and social issues in their decision-making.</p>
+                <img class="mb-3" src="http://inktanksolutions.s3.amazonaws.com/SICO-Mailshot/2h20/images/Nishit-Lakhotia-1.jpg" alt="">
+                <h5> SICO&rsquo;s Head of Research Conducts Seminar for Bahrain CFA society</h5>
+
+                <p>SICO&rsquo;s Head of Research, Nishit Lakhotia, conducted an educational seminar for the Bahrain Chapter of the Institute of Chartered Accountants of India (BCICAI) during July 2020 titled &lsquo;Investment Approaches During a Global Pandemic&rsquo;.
+                    The seminar examined different investment techniques during volatile times. The objective of the seminar was to provide investment tips and techniques during times of uncertainty such as the ongoing pandemic by citing some practical
+                    examples. The seminar was well attended and appreciated by the Bahrain CA society.</p>
+
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="col-md-3 ">
+        <div class="sidebar d-none d-lg-block">
+            
+
+    <ul class="list-unstyled">
+        
+            <li class=" ">
+                <a href="Condolences-to-the-Leadership.html">
+                    Our Sincere Condolences
+                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="crown-prince.html">
+                    Congratulations to Sheikh Salman bin Hamad Al Khalifa
+                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="Note-from-the-CEO.html">
+                    Note from the CEO
+                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="3Q2020-Financial-Results.html">
+                    Third Quarter Financial Results
+                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="New-Board-Appointments.html">
+                    New Board Appointments
+                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="News-Highlights.html">
+                    News Highlights
+                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="viewpoint.html">
+                    Privatizing Government Assets Across the Region
+                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="research.html">
+                    Investing in the Midst of a Global Pandemic - an Equity Perspective
+                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="qa.html">
+                    Q&amp;A: Mohamed Ibrahim
+                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="Awards.html">
+                    2020 Awards
+                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="New-Appointments.html">
+                    New Appointments
+                </a>
+            </li>
+            
+            <li class="active">
+                <a href="events.html">
+                    Events and Conferences
+                </a>
+            </li>
+            
+            <li class=" ">
+                <a href="ESG.html">
+                    ESG
+                </a>
+            </li>
+            
+    </ul>
+
+    <script>
+        var url = window.location.pathname.split("/")[window.location.pathname.split("/").length - 1];
+    </script>        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="container-fluid">
+        <footer class="row" style="background-image: url('https://sicobank.com/Themes/Default/img/backgrounds/footer-pattern-white.svg');background-position: center top;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-position: 22em 15%;background-repeat: no-repeat;">
+            <p>SICO BSC(c), licensed as a conventional wholesale bank by the CBB, P.O.Box 1331, BMB Centre, Diplomatic Area, Manama, Kingdom of Bahrain, T: +973 1751 5000, F: +973 1751 4000 sicobank.com</p>
+        </footer>
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+
+    </html>
