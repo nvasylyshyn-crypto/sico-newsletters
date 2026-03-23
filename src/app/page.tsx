@@ -5,7 +5,7 @@ export default function Page() {
     { name: '1H 2024', path: '1h24/index.html' },
     { name: '2H 2023', path: '2h23/index.html' },
     { name: '1Q 2023', path: '1q2023/index.html' },
-    { name: '2H 2022', path: '2h22/index.html' },
+    { name: '2H 2022', path: '2h2022/index.html' },
     { name: '1H 2022', path: '1h2022/index.html' },
     { name: '2H 2020', path: '2h2020/2h2020-mailshot.html' },
     { name: 'MailShot (Oldest)', path: 'MailShot/index.html' },
