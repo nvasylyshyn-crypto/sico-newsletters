@@ -1,4 +1,6 @@
 {
-  "mountPath": "/newsletters",
-  "framework": "nextjs"
+  "cloud": {
+    "mountPath": "/newsletters",
+    "framework": "nextjs"
+  }
 }
