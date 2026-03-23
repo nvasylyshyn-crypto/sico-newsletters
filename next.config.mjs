@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'standalone',
   basePath: '/newsletters',
+  assetPrefix: '/newsletters',
 };
 
 export default nextConfig;
