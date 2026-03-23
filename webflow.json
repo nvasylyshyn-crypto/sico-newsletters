@@ -1,1 +1,4 @@
-{"mountPath": "/newsletters"}
+{
+  "mountPath": "/newsletters",
+  "framework": "nextjs"
+}
