@@ -20,11 +20,10 @@ for (const [outputName, sourceName, baseHref] of ENTRIES) {
   const outputPath = path.join(PUBLIC_DIR, outputName);
 
   let html = fs.readFileSync(sourcePath, 'utf8');
+  html = html.replace(/\s*<base[^>]*href=["'][^"']*["'][^>]*>\s*/i, '\n');
 
-  if (html.includes('<base ')) {
-    html = html.replace(/<base[^>]*href=["'][^"']*["'][^>]*>/i, `<base href="${baseHref}">`);
-  } else if (html.includes('</head>')) {
-    html = html.replace('</head>', `  <base href="${baseHref}">\n</head>`);
+  if (html.includes('<head>')) {
+    html = html.replace('<head>', `<head>\n  <base href="${baseHref}">`);
   }
 
   fs.writeFileSync(outputPath, html);
