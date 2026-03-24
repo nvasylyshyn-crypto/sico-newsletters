@@ -1,7 +1,8 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  trailingSlash: false,
+  basePath: '/newsletters',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },

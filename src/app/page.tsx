@@ -1,14 +1,16 @@
+import Link from 'next/link';
+
 export default function Page() {
   const newsletters = [
-    { name: '1H 2025', path: '1h25/index.html' },
-    { name: '1H 2025 (Archive)', path: '1h2025/index.html' },
-    { name: '1H 2024', path: '1h24/index.html' },
-    { name: '2H 2023', path: '2h23/index.html' },
-    { name: '1Q 2023', path: '1q2023/index.html' },
-    { name: '2H 2022', path: '2h2022/index.html' },
-    { name: '1H 2022', path: '1h2022/index.html' },
-    { name: '2H 2020', path: '2h2020/2h2020-mailshot.html' },
-    { name: 'MailShot (Oldest)', path: 'MailShot/index.html' },
+    { name: '1H 2025', href: '/1h25/' },
+    { name: '1H 2025 (Archive)', href: '/1h2025/' },
+    { name: '1H 2024', href: '/1h24/' },
+    { name: '2H 2023', href: '/2h23/' },
+    { name: '1Q 2023', href: '/1q2023/' },
+    { name: '2H 2022', href: '/2h2022/' },
+    { name: '1H 2022', href: '/1h2022/' },
+    { name: '2H 2020', href: '/2h2020/2h2020-mailshot.html' },
+    { name: 'MailShot (Oldest)', href: '/MailShot/' },
   ];
 
   return (
@@ -17,10 +19,10 @@ export default function Page() {
       <p>Select a newsletter to view:</p>
       <ul style={{ lineHeight: '2' }}>
         {newsletters.map((n) => (
-          <li key={n.path}>
-            <a href={'/newsletters/' + n.path} style={{ textDecoration: 'none', color: '#0066cc', fontWeight: 'bold' }}>
+          <li key={n.href}>
+            <Link href={n.href} style={{ textDecoration: 'none', color: '#0066cc', fontWeight: 'bold' }}>
               {n.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
