@@ -1,1 +1,10 @@
 node_modules
+.next
+.open-next
+out
+build
+dist
+*.log
+.DS_Store
+.env*
+!.env.example
