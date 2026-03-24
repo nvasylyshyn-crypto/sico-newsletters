@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	<title>SICO</title>
+
+	<style type="text/css">
+		div, p, a, li, td { -webkit-text-size-adjust:none; }
+		    *{
+		    -webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    }
+		    .ReadMsgBody
+		    {width: 100%; background-color: #ffffff;}
+		    .ExternalClass
+		    {width: 100%; background-color: #ffffff;}
+		    body{width: 100%; height: 100%; background-color: #ffffff; margin:0; padding:0; -webkit-font-smoothing: antialiased;}
+		    html{width: 100%; background-color: #ffffff;}
+		    @font-face {font-family: 'proxima_novalight';src: url('/newsletters/assets/external/2e92476b_proximanova-light-webfont.eot');src: url('/newsletters/assets/external/2e92476b_proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),url('/newsletters/assets/external/67247239_proximanova-light-webfont.woff') format('woff'),url('/newsletters/assets/external/3e18d2e9_proximanova-light-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
+		    @font-face {font-family: 'proxima_nova_rgregular'; src: url('/newsletters/assets/external/211392db_proximanova-regular-webfont.eot');src: url('/newsletters/assets/external/211392db_proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),url('/newsletters/assets/external/ee9e63f5_proximanova-regular-webfont.woff') format('woff'),url('/newsletters/assets/external/ef590e7c_proximanova-regular-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
+		    @font-face {font-family: 'proxima_novasemibold';src: url('/newsletters/assets/external/66c765bc_proximanova-semibold-webfont.eot');src: url('/newsletters/assets/external/66c765bc_proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),url('/newsletters/assets/external/fbf46aca_proximanova-semibold-webfont.woff') format('woff'),url('/newsletters/assets/external/91fc0634_proximanova-semibold-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
+		    @font-face {font-family: 'proxima_nova_rgbold';src: url('/newsletters/assets/external/950dc90c_proximanova-bold-webfont.eot');src: url('/newsletters/assets/external/950dc90c_proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),url('/newsletters/assets/external/1dad2a44_proximanova-bold-webfont.woff') format('woff'),url('/newsletters/assets/external/84d8e991_proximanova-bold-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
+		    @font-face {font-family: 'proxima_novathin';src: url('/newsletters/assets/external/9e70836f_proximanova-thin-webfont.eot');src: url('/newsletters/assets/external/9e70836f_proximanova-thin-webfont.eot?#iefix') format('embedded-opentype'),url('/newsletters/assets/external/ca4cbcce_proximanova-thin-webfont.woff') format('woff'),url('/newsletters/assets/external/5725264c_proximanova-thin-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
+		    @font-face {font-family: 'proxima_novaextrabold';src: url('/newsletters/assets/external/3af4a1ea_proximanova-extrabold-webfont.eot');src: url('/newsletters/assets/external/3af4a1ea_proximanova-extrabold-webfont.eot?#iefix') format('embedded-opentype'),url('/newsletters/assets/external/5afaf123_proximanova-extrabold-webfont.woff2') format('woff2'),url('/newsletters/assets/external/e6acf49c_proximanova-extrabold-webfont.woff') format('woff'),url('/newsletters/assets/external/b7138e7e_proximanova-extrabold-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
+		    p {padding: 0!important; margin-top: 0!important; margin-right: 0!important; margin-bottom: 0!important; margin-left: 0!important; }
+		    .underline:hover {text-decoration: underline!important;}
+		    #ring{position: relative; z-index: 1;}
+		    #ring::after {content: ""; position: absolute; background-size: 31px!important; z-index: -1; top: 0; bottom: 0; left: 0; right: 0; background-repeat: no-repeat!important; background: url('/newsletters/assets/external/ec4c7dcc_icon_ring.png') center center; opacity: .2;}
+		    #ring:hover {background-repeat: no-repeat!important; position: none; background: url('/newsletters/assets/external/ec4c7dcc_icon_ring.png') center center; opacity: .9!important; z-index: 2; background-size: 31px!important;}
+		    .jump:hover {opacity:0.75;filter:alpha(opacity=75);padding-top: 10px!important;}
+		    a#rotator img {-webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out; -o-transition: all 1s ease-in-out; -ms-transition: all 1s ease-in-out; }
+		    a#rotator img:hover { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -o-transform: rotate(360deg);-ms-transform: rotate(360deg); }
+		    #logo img {width: 125px; height: auto;}
+		    .image57 img {width: 57px; height: auto;}
+		    .image175 img {width: 175px; height: auto;}
+		    .image270 img {width: 270px; height: auto;}
+		    .image103 img {width: 103px; height: auto;}
+		    .image300 img {width: 300px; height: auto;}
+		    .icon72 img {width: 72px; height: auto;}
+		    .icon24 img {width: 24px; height: auto;}
+		    .icon40 img {width: 40px; height: auto;}
+		    .icon51 img {width: 51px; height: auto;}
+		    .image270 img {width: 270px; height: auto;}
+		    .image600 img {width: 600px; height: auto;}
+		    #pad6 img {padding: 6px!important; text-align: center!important; display: inline; }
+		    #ring img {width: 15px; height: auto;}
+		    #mainbanner{
+		    height: 600px;
+		    }
+		    .mobilebanner{
+		    background-position: 0px 10%;
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+		    background-position: 0px 0px;
+		    background-repeat: no-repeat;
+		    }
+	</style>
+	<!--
+  @media only screen and (max-width: 640px)
+  {*/
+  -->
+
+	<style type="text/css">
+		@media only screen and (max-width: 640px){
+		    .header-img {
+		    max-width: 100% !important;
+		    height: auto;
+		    }
+		    body{width:auto!important;}
+		    table[class=full] {width: 100%!important; clear: both; }
+		    table[class=mobile] {width: 100%!important; padding-left: 30px; padding-right: 30px; clear: both; }
+		    table[class=fullCenter] {width: 100%!important; text-align: center!important; clear: both; }
+		    td[class=fullCenter] {width: 100%!important; text-align: center!important; clear: both; }
+		    *[class=erase] {display: none;}
+		    *[class=buttonScale] {float: none!important; text-align: center!important; display: inline-block!important; clear: both;}
+		    .image600 img {width: 100%!important;}
+		    td[class=pad20] {padding-left: 20px!important; padding-right: 20px!important; text-align: center!important; clear: both; }
+		    td[class=h40] {height: 40px!important; clear: both; }
+		    *[class=h20] {width: 100%!important; height: 20px!important;}
+		    table[class=mcenter] {text-align:center; vertical-align:middle; clear:both!important; float:none; margin: 0px!important;}
+		    #ring {width: 50px!important;}
+		    .image600 img {width: 100%!important; height: auto!important;}
+		    .pic600 {width: 100%!important;height: auto!important;}
+		    .pic270 {width:270px; overflow:hidden;}
+		    .pic175 {width:175px;height:125px;overflow:hidden;}
+		    .pic270 {width:270px;overflow:hidden;}
+		    
+		    }
+	</style>
+	<!--
+  @media only screen and (max-width: 479px)
+  {
+  -->
+
+	<style type="text/css">
+		@media only screen and (max-width: 479px){
+		    .hide-sm{display: none !important;}
+		    body{width:auto!important;}
+		    table[class=full] {width: 100%!important; clear: both; }
+		    table[class=mobile] {width: 100%!important; padding-left: 20px; padding-right: 20px; clear: both; }
+		    table[class=fullCenter] {width: 100%!important; text-align: center!important; clear: both; }
+		    td[class=fullCenter] {width: 100%!important; text-align: center!important; clear: both; }
+		    *[class=erase] {display: none;}
+		    *[class=buttonScale] {float: none!important; text-align: center!important; display: inline-block!important; clear: both;}
+		    .image600 img {width: 100%!important;}
+		    .image300 img {width: 100%!important;}
+		    td[class=pad20] {padding-left: 20px!important; padding-right: 20px!important; text-align: center!important; clear: both;}
+		    td[class=h40] {height: 30px!important; clear: both; }
+		    table[class=mcenter] {text-align:center; vertical-align:middle; clear:both!important; float:none; margin: 0px!important;}
+		    *[class=h20] {width: 100%!important; height: 20px!important;}
+		    *[class=font50] {font-size: 50px!important; line-height: 58px!important;}
+		    #ring {width: 50px!important;}
+		    .image600 img {width: 100%!important; height: auto!important;}
+		    .pic600 {width: 100%!important;height: auto!important;}
+		    .pic270 {width:270px; overflow:hidden;}
+		    .pic175 {width:175px;height:125px;overflow:hidden;}
+		    .pic270 {width:270px;overflow:hidden;}
+		    .l-md-c-sm{
+		    text-align: center;
+		    overflow: hidden;
+		    }
+		    img.res-img {
+		    max-width: 70% !important;
+		    height: auto;
+		    }
+		    .header-img {
+		    display: block !important;
+		    height: auto;
+		    }
+		    .mobilebanner {
+		    background-image: url('/newsletters/assets/external/01cad0d5_banner.jpg');
+		    background-position: 50% 10%;
+		    -webkit-background-size: 170%;
+		    -moz-background-size: 170%;
+		    -o-background-size: 170%;
+		    background-size: 170%;
+		    }
+		    #mainbanner{
+		    height: 200px;
+		    }
+		    }
+	</style>
+
+	<style type="text/css">
+		.pic175 {width:175px;height:125px;overflow:hidden;}
+		  
+		  .pic600 {width:600px;overflow:hidden;}
+		  
+		  .pic270 {width:270px; overflow:hidden;}
+	</style>
+
+	<style>
+		body{ background: none !important; }
+	</style>
+  <base href="/newsletters/1q2023/">
+</head>
+
+<body>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" align="left">
+					<!-- Image 270px - 1-->
+					<table class="fullCenter" width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;">
+						<tbody>
+							<tr>
+								<td class="l-md-c-sm" width="100%" align="right" style="padding-right: 9px;"><span style="display: block;"></span>
+									<div><span style="display: block;"><a href=
+
+"/newsletters/assets/external/59681ed1_1h2021mailshot.html" style=
+
+"color: grey;font-size: 13px;">
+
+<!-- View this email in your browser-->
+
+ 
+
+<!-- <img src="/newsletters/assets/external/f491f305_logo.jpg" width="85"  border="0">--></a></span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="fullCenter" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" align="left">
+					<table class="fullCenter" width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;">
+						<tbody>
+							<tr>
+								<td class="l-md-c-sm" width="100%" align="left"><span style="display: block;"></span>
+									<div><span style="display: block;"><a><img class="header-img" src=
+
+"/newsletters/assets/external/1a632aa1_index-banner.jpg"
+
+border="0"></a></span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+		<tbody>
+			<tr>
+				<td width="100%" height="50"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" align="center">
+					<!-- Image 270px - 1-->
+					<table class="fullCenter" width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;">
+						<tbody>
+							<tr>
+								<td class="image270" width="100%" align="center"><span style="display: block;"></span>
+									<div class="grow270 pic270" style="margin-bottom: 20px;">
+										<span style="display: block;"><a href=
+
+"../2h2020/"><img class="hover" src=
+
+"/newsletters/assets/external/248763f2_annoucment-index.jpg"
+
+width="270" alt="" border="0"></a></span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- Space-->
+					<table class="full" width="1" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+						<tbody>
+							<tr>
+								<td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- End Space-->
+					<!-- Text Right-->
+					<table class="fullCenter" width="270" border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+						<tbody>
+							<tr>
+								<td class="fullCenter" valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;">
+									<!-- [if !mso] <!--> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;">
+
+<!-- <![endif]-->Abdulla Kamal Appointed New Chairman 
+
+<!-- [if !mso] <!--></span> 
+									<!-- <![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td width="100%" height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="fullCenter" valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; color: #4f5052; font-size: 17px; line-height: 22px;">
+									<!-- [if !mso] <!--> <span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;">
+
+<!-- <![endif]-->SICO’s new Chairman, Abdulla Kamal, assumed his
+
+post in April 2023 <!-- [if !mso] <!--></span> 
+									<!-- <![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td width="100%" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="100%" align="center">
+									<!-- SORTABLE-->
+									<div class="sortable_inner ui-sortable">
+										<table class="buttonScale" border="0" cellpadding="0" cellspacing="0" align="left" object="drag-module-small">
+											<tbody style="border-color: rgb(116, 145, 177);">
+												<tr style="border-color: rgb(116, 145, 177);">
+													<td align="left" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+														<!-- [if !mso] <!--> <span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);">
+
+<!-- <![endif]--><a href="./new-chairman-announcement.html" target=
+
+"_blank" style=
+
+"color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read
+
+more</a> <!-- [if !mso] <!--></span> 
+														<!-- <![endif]-->
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- End Wrapper-->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- End Wrapper                          -->
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" height="30"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#FFFFFF" style="background-color: rgb(255, 255, 255);">
+		<tbody>
+			<tr>
+				<td width="100%" valign="top" align="center">
+					<!-- Wrapper-->
+					<table class="mobile" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+						<tbody>
+							<tr>
+								<td align="center">
+									<!-- Wrapper-->
+									<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+										<tbody>
+											<tr>
+												<td width="100%" align="center">
+													<!-- Image 270px - 1-->
+													<table class="fullCenter" width="270" border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;">
+														<tbody>
+															<tr>
+																<td class="image270" width="100%" align="center"><span style="display: block;"></span>
+																	<div class="grow270 pic270" style="margin-bottom: 20px;">
+																		<span style="display: block;"><a href="#"><img class="hover" src=
+
+"/newsletters/assets/external/1758c413_najla-index.png"
+
+width="270" border="0"></a></span>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+													<!-- Text Right-->
+													<table class="fullCenter" width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+														<tbody>
+															<tr>
+																<td class="fullCenter" valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;">
+																	<!-- [if !mso] <!--> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;">
+
+<!-- <![endif]-->Note From the CEO 
+
+<!-- [if !mso] <!Najla Al-Shirawi sheds lights on the factors that drive GCC economies and shares her outlook on what’s in store for 2023--></span>
+																	<!-- <![endif]-->
+																</td>
+															</tr>
+															<tr>
+																<td width="100%" height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+															</tr>
+															<tr>
+																<td class="fullCenter" valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; color: #4f5052; font-size: 17px; line-height: 22px;">
+																	<!-- [if !mso] <!--> <span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;">
+
+<!-- <![endif]-->Najla Al-Shirawi discusses the significance of
+
+embracing collective sustainable action to reach our targets as a
+
+region <!-- [if !mso] <!--></span> 
+																	<!-- <![endif]-->
+																</td>
+															</tr>
+															<tr>
+																<td width="100%" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+															</tr>
+															<tr>
+																<td width="100%" align="center">
+																	<!-- SORTABLE-->
+																	<div class="sortable_inner ui-sortable">
+																		<table class="buttonScale" border="0" cellpadding="0" cellspacing="0" align="left" object="drag-module-small">
+																			<tbody style="border-color: rgb(116, 145, 177);">
+																				<tr style="border-color: rgb(116, 145, 177);">
+																					<td align="left" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+																						<!-- [if !mso] <!--> <span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);">
+
+<!-- <![endif]--><a href="./note-from-ceo.html" target="_blank"
+
+style=
+
+"color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read
+
+more</a> <!-- [if !mso] <!--></span> 
+																						<!-- <![endif]-->
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" height="50"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" align="center">
+					<!-- Headline-->
+					<table class="mobile" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+						<tbody>
+							<tr>
+								<td class="image600" width="100%" align="center" style="line-height: 1px;"><span style="display: block;"></span>
+									<div class="grow600"><span style="display: block;"><img class=
+
+"hover" src=
+
+"/newsletters/assets/external/27c8b803_news-highlight-banner-1.jpg"
+
+editable="" width="600" border="0"></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td width="100%" style="height: 25px"></td>
+							</tr>
+							<tr>
+								<td class="mobile" valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;">
+									<!-- [if !mso] <!--> <a style="text-decoration: none;color: #1e2d44;"><span style=
+
+"font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;text-decoration: none;">
+
+<!-- <![endif]-->News Highlights <!-- [if !mso] <!--></span></a> 
+									<!-- <![endif]-->
+								</td>
+							</tr>
+							<!---->
+							<tr>
+								<td width="100%" style="height: 10px"></td>
+							</tr>
+							<tr>
+								<td class="mobile" valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; color: #4f5052; font-size: 17px; line-height: 18px; font-weight: normal;">
+									<!-- [if !mso] <!--> <span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;">
+
+<!-- <![endif]-->The first half of 2023 saw SICO making several
+
+strides across its business lines<br>
+
+<!-- [if !mso] <!--></span> 
+									<!-- <![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td width="100%" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="buttonScale" width="100%" align="left">
+									<!-- SORTABLE-->
+									<div class="sortable_inner ui-sortable">
+										<table class="buttonScale" border="0" cellpadding="0" cellspacing="0" align="left" object="drag-module-small">
+											<tbody style="border-color: rgb(116, 145, 177);">
+												<tr style="border-color: rgb(116, 145, 177);">
+													<td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+														<!-- [if !mso] <!--> <span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);">
+
+<!-- <![endif]--><a style=
+
+"color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);"
+
+href="./news-highlights.html" target="_blank">Read More</a> 
+
+<!-- [if !mso] <!--></span> 
+														<!-- <![endif]-->
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" height="50"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" align="center">
+					<!-- Image 270px - 1-->
+					<table class="fullCenter" width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;">
+						<tbody>
+							<tr>
+								<td class="image270" width="100%" align="center"><span style="display: block;"></span>
+									<div class="grow270 pic270" style="margin-bottom: 20px;">
+										<span style="display: block;"><a href=
+
+"../2h2020/"><img class="hover" src=
+
+"/newsletters/assets/external/5902eed9_opinion-piece-index.jpg"
+
+width="270" alt="" border="0"></a></span>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- Space-->
+					<table class="full" width="1" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+						<tbody>
+							<tr>
+								<td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- End Space-->
+					<!-- Text Right-->
+					<table class="fullCenter" width="270" border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+						<tbody>
+							<tr>
+								<td class="fullCenter" valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;">
+									<!-- [if !mso] <!--> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;">
+
+<!-- <![endif]-->Opinion Piece: Saudi Insurance Sector – A GCC
+
+Success Story <!-- [if !mso] <!--></span> 
+									<!-- <![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td width="100%" height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="fullCenter" valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; color: #4f5052; font-size: 17px; line-height: 22px;">
+									<!-- [if !mso] <!--> <span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;">
+
+<!-- <![endif]-->Head of Asset Management Research at SICO, Waruna
+
+Kumarage, sheds light on the sector’s positive performance in the
+
+first half of the year <!-- [if !mso] <!--></span> 
+									<!-- <![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td width="100%" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="100%" align="center">
+									<!-- SORTABLE-->
+									<div class="sortable_inner ui-sortable">
+										<table class="buttonScale" border="0" cellpadding="0" cellspacing="0" align="left" object="drag-module-small">
+											<tbody style="border-color: rgb(116, 145, 177);">
+												<tr style="border-color: rgb(116, 145, 177);">
+													<td align="left" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+														<!-- [if !mso] <!--> <span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);">
+
+<!-- <![endif]--><a href="./opinion-piece.html" target="_blank"
+
+style=
+
+"color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read
+
+more</a> <!-- [if !mso] <!--></span> 
+														<!-- <![endif]-->
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" height="50"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#FFFFFF" style="background-color: rgb(255, 255, 255);">
+		<tbody>
+			<tr>
+				<td width="100%" valign="top" align="center">
+					<!-- Wrapper-->
+					<table class="mobile" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+						<tbody>
+							<tr>
+								<td align="center">
+									<!-- Wrapper-->
+									<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+										<tbody>
+											<tr>
+												<td width="100%" align="center">
+													<!-- Image 270px - 1-->
+													<table class="fullCenter" width="270" border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;">
+														<tbody>
+															<tr>
+																<td class="image270" width="100%" align="center"><span style="display: block;"></span>
+																	<div class="grow270 pic270" style="margin-bottom: 20px;">
+																		<span style="display: block;"><a href="#"><img class="hover" src=
+
+"/newsletters/assets/external/a5947f1f_q-a-index.jpg"
+
+width="270" border="0"></a></span>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+													<!-- Text Right-->
+													<table class="fullCenter" width="270" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+														<tbody>
+															<tr>
+																<td class="fullCenter" valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;">
+																	<!-- [if !mso] <!--> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;">
+
+<!-- <![endif]-->Q&amp;A <!-- [if !mso] <!--></span> 
+																	<!-- <![endif]-->
+																</td>
+															</tr>
+															<tr>
+																<td width="100%" height="10" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+															</tr>
+															<tr>
+																<td class="fullCenter" valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; color: #4f5052; font-size: 17px; line-height: 22px;">
+																	<!-- [if !mso] <!--> <span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;">
+
+<!-- <![endif]-->Hamda Almajed discusses her role as Senior Broker
+
+at SICO <!-- [if !mso] <!--></span> 
+																	<!-- <![endif]-->
+																</td>
+															</tr>
+															<tr>
+																<td width="100%" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+															</tr>
+															<tr>
+																<td width="100%" align="center">
+																	<!-- SORTABLE-->
+																	<div class="sortable_inner ui-sortable">
+																		<table class="buttonScale" border="0" cellpadding="0" cellspacing="0" align="left" object="drag-module-small">
+																			<tbody style="border-color: rgb(116, 145, 177);">
+																				<tr style="border-color: rgb(116, 145, 177);">
+																					<td align="left" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+																						<!-- [if !mso] <!--> <span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);">
+
+<!-- <![endif]--><a href="./qanda.html" target="_blank" style=
+
+"color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read
+
+more</a> <!-- [if !mso] <!--></span> 
+																						<!-- <![endif]-->
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- End Wrapper-->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- End Wrapper-->
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" height="30"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#212528" style="background-color: rgb(30, 45, 68); border-color: rgb(30, 45, 68);">
+		<tbody>
+			<tr>
+				<td id="sep2" align="center" style="background-image: url('/newsletters/assets/external/e16b42a2_awards-index.png');background-position: center top;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-position: center;background-repeat: no-repeat;">
+					<!--if gte mso 9
+        v:rect(xmlns:v='urn:schemas-microsoft-com:vml' fill='true' stroke='false' style='mso-width-percent:600;')
+          v:fill#sep2Change_outlook.stay(type='tile' src='/newsletters/assets/external/e16b42a2_awards-index.png')
+            v:textbox(style='mso-fit-shape-to-text:true' inset='0,0,0,0')
+        -->
+					<div>
+						<!-- Wrapper-->
+						<table class="mobile" align="center" border="0" width="100%" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td align="center">
+										<!-- Wrapper-->
+										<table class="full" align="center" border="0" width="600" cellpadding="0" cellspacing="0">
+											<tbody>
+												<tr>
+													<td width="100%" align="center">
+														<!-- Text-->
+														<table class="full" width="550" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+															<tbody>
+																<tr>
+																	<td height="45" width="100%"></td>
+																</tr>
+																<tr>
+																	<td class="fullCenter" valign="top" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 24px; color: #ffffff; line-height: 28px; font-weight: bold; word-break: break-word;">
+																		<!-- [if !mso] <!--> <span style="font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;">
+
+<!-- <![endif]-->Awards <!-- [if !mso] <!--></span> 
+																		<!-- <![endif]-->
+																	</td>
+																</tr>
+																<tr>
+																	<td style="color: #ffffff;text-align: center;font-family: Helvetica,Arial,sans-serif;line-height: 22px;font-weight: bold;vertical-align: top;font-size: 14px;padding-top: 3px;word-break: break-word;">
+																		<!-- [if !mso] <!-->
+																		<br>
+																		<span style="font-family: Helvetica, Arial, sans-serif;font-weight: bold;font-size: 17px;">
+
+<!-- <![endif]-->SICO’s first batch of awards for the year<br>
+
+<!-- [if !mso] <!--></span> 
+																		<!-- <![endif]-->
+																	</td>
+																</tr>
+																<tr>
+																	<td height="25" width="100%"></td>
+																</tr>
+																<tr>
+																	<td width="100%" align="center">
+																		<!-- SORTABLE-->
+																		<div class="sortable_inner ui-sortable">
+																			<table class="buttonScale" border="0" cellpadding="0" cellspacing="0" align="center" object="drag-module-small">
+																				<tbody style="border-color: rgb(116, 145, 177);">
+																					<tr style="border-color: rgb(116, 145, 177);">
+																						<td align="left" height="32" style="padding-left: 15px;padding-right: 15px;font-weight: bold;font-family: Helvetica, Arial, sans-serif;color: white;text-transform: uppercase;border: 2px solid rgb(255, 255, 255);background: rgba(255, 255, 255, 0.2);">
+																							<!-- [if !mso] <!--> <span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);">
+
+<!-- <![endif]--><a href="./awards.html" target="_blank" style=
+
+"color: white;font-size: 12px;text-decoration: none;line-height: 32px;width: 100%;border-color: white;">Read
+
+more</a> <!-- [if !mso] <!--></span> 
+																							<!-- <![endif]-->
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td height="45" width="100%"></td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- End Wrapper-->
+					</div>
+					<!--if gte mso 9.-->
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" height="50"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" align="center">
+					<!-- Headline-->
+					<table class="mobile" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+						<tbody>
+							<tr>
+								<td class="image600" width="100%" align="center" style="line-height: 1px;"><span style="display: block;"></span>
+									<div class="grow600 pic600"><span style="display: block;"><img class="hover" src=
+
+"/newsletters/assets/external/9f54bcdf_40-index.jpg"
+
+editable="" width="600" border="0"></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td width="100%" style="height: 25px"></td>
+							</tr>
+							<tr>
+								<td class="mobile" valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;">
+									<!-- [if !mso] <!--> <a style="text-decoration: none;color: #1e2d44;"><span style=
+
+"font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;text-decoration: none;">
+
+<!-- <![endif]-->
+
+ <!-- [if !mso] <!--></span></a> 
+									<!-- <![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td width="100%" style="height: 10px"></td>
+							</tr>
+							<tr>
+								<td class="mobile" valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; color: #4f5052; font-size: 17px; line-height: 18px; font-weight: normal;">
+									<!-- [if !mso] <!--> <span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;">
+
+<!-- <![endif]-->With the addition of Elham Al Majed, SICO Board of
+
+Directors has achieved the highest female representation in the
+
+Kingdom<br>
+
+<!-- [if !mso] <!--></span> 
+									<!-- <![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td width="100%" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="buttonScale" width="100%" align="left">
+									<!-- SORTABLE-->
+									<div class="sortable_inner ui-sortable">
+										<table class="buttonScale" border="0" cellpadding="0" cellspacing="0" align="left" object="drag-module-small">
+											<tbody style="border-color: rgb(116, 145, 177);">
+												<tr style="border-color: rgb(116, 145, 177);">
+													<td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+														<!-- [if !mso] <!--> <span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);">
+
+<!-- <![endif]--><a href="./40-female-representation.html" target=
+
+"_blank" style=
+
+"color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read
+
+More</a> <!-- [if !mso] <!--></span> 
+														<!-- <![endif]-->
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" height="50"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" align="center">
+					<!-- Headline-->
+					<table class="mobile" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+						<tbody>
+							<tr>
+								<td class="image600" width="100%" align="center" style="line-height: 1px;"><span style="display: block;"></span>
+									<div class="grow600 pic600"><span style="display: block;"><img class="hover" src=
+
+"/newsletters/assets/external/3c7ef854_esg-index.jpg"
+
+editable="" width="600" border="0"></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td width="100%" style="height: 25px"></td>
+							</tr>
+							<tr>
+								<td class="mobile" valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; font-size: 24px; color: #212528; line-height: 28px; font-weight: bold;">
+									<!-- [if !mso] <!--> <a style="text-decoration: none;color: #1e2d44;"><span style=
+
+"font-family: Arial,Georgia,'Times New Roman',Times,serif; font-weight: 700;text-decoration: none;">
+
+<!-- <![endif]-->ESG <!-- [if !mso] <!--></span></a> 
+									<!-- <![endif]-->
+								</td>
+							</tr>
+							<!---->
+							<tr>
+								<td width="100%" style="height: 10px"></td>
+							</tr>
+							<tr>
+								<td class="mobile" valign="middle" width="100%" style="text-align: left; font-family: Arial, Helvetica, sans-serif; color: #4f5052; font-size: 17px; line-height: 18px; font-weight: normal;">
+									<!-- [if !mso] <!--> <span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;">
+
+<!-- <![endif]-->SICO proudly participated in a number of impactful
+
+initiatives targeting different social and environmental topics<br>
+
+<!-- [if !mso] <!--></span> 
+									<!-- <![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td width="100%" height="25" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="buttonScale" width="100%" align="left">
+									<!-- SORTABLE-->
+									<div class="sortable_inner ui-sortable">
+										<table class="buttonScale" border="0" cellpadding="0" cellspacing="0" align="left" object="drag-module-small">
+											<tbody style="border-color: rgb(116, 145, 177);">
+												<tr style="border-color: rgb(116, 145, 177);">
+													<td align="center" height="32" style="padding-left: 15px; padding-right: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: rgb(116, 145, 177); text-transform: uppercase; border: 2px solid rgb(116, 145, 177);">
+														<!-- [if !mso] <!--> <span style="font-family: proxima_nova_rgbold, Helvetica; font-weight: normal; border-color: rgb(116, 145, 177);">
+
+<!-- <![endif]--><a href="./esg.html" target="_blank" style=
+
+"color: rgb(116, 145, 177); font-size: 12px; text-decoration: none; line-height: 32px; width: 100%; border-color: rgb(116, 145, 177);">Read
+
+More</a> <!-- [if !mso] <!--></span> 
+														<!-- <![endif]-->
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td width="100%" height="30"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+		<tbody>
+			<tr>
+				<td align="center">
+					<!-- Wrapper-->
+					<table class="mobile" align="center" border="0" width="600" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td align="center">
+									<!-- Start Icons-->
+									<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center" object="drag-module-small">
+										<tbody>
+											<tr>
+												<td width="100%" height="60" valign="middle" align="left">
+													<!-- Icons-->
+													<p style="color: #1e2d44;font-size: 20px;font-family: 'proxima_nova_rgregular', Helvetica;">
+														Get Socialized</p>
+												</td>
+											</tr>
+											<tr>
+												<td width="100%" valign="middle" align="left">
+													<!-- Icons-->
+													<table class="buttonScale" width="150" border="0" cellpadding="0" cellspacing="0" align="left" style="text-align: center; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+														<tbody>
+															<tr>
+																<td height="40" valign="middle" align="left" width="31">
+																	<a href="https://www.instagram.com/sico_bank/" style="text-decoration: none;">
+																		<img src="/newsletters/assets/external/143b53f1_instagram-color.png" width="45" border="0">
+																	</a>
+																</td>
+																<td height="40" valign="middle" align="left" width="31">
+																	<a href="https://www.linkedin.com/company/sico-bsc-c" style="text-decoration: none;">
+																		<img src="/newsletters/assets/external/945ad23a_linkedin-color.png" width="45" border="0">
+																	</a>
+																</td>
+																<td height="40" valign="middle" align="left" width="31">
+																	<a href="https://twitter.com/SICOBANK" style="text-decoration: none;">
+																		<img src="/newsletters/assets/external/a6e4d891_twitter-new-logo-black-01-01.png" width="45" border="0">
+																	</a>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td width="100%" height="50" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- End Icons-->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="full" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#FFFFFF" style="background-color: rgb(30, 45, 68);">
+		<tbody>
+			<tr>
+				<td width="100%" valign="top" align="center">
+					<!-- Wrapper-->
+					<table class="mobile" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+						<tbody>
+							<tr>
+								<td align="center" style="background-image: url('./Themes/Default/img/backgrounds/footer-pattern-white.svg');background-position: center top;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-position: 237px 15%;background-repeat: no-repeat;">
+									<!-- Space-->
+									<table class="full" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+										<tbody>
+											<tr>
+												<td width="100%" height="25"></td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- End Space-->
+									<!-- Wrapper-->
+									<table class="full" width="600" border="0" cellpadding="0" cellspacing="0" align="center">
+										<tbody>
+											<tr>
+												<td width="100%" align="center">
+													<!-- Text Left-->
+													<table class="fullCenter" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+														<tbody>
+															<tr>
+																<td class="fullCenter" valign="middle" width="100%" style="text-align: center;font-family: Helvetica, Arial, sans-serif;font-size: 12px;color: #ffffff;line-height: 22px;padding: 0 50px;">
+																	<!-- [if !mso] <!--> <span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;">
+
+<!-- <![endif]-->SICO BSC(c), licensed as a conventional wholesale
+
+bank by the CBB, PO Box: 1331, Bahrain World Trade Center, East
+
+Tower, Manama, Kingdom of Bahrain, T: (+973) 1751 5000, F: (+973)
+
+1751 4000, sicobank.com <!-- [if !mso] <!--></span> 
+																	<!-- <![endif]-->
+																</td>
+															</tr>
+														</tbody>
+													</table>
+													<!-- Space-->
+													<table class="full" width="1" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+														<tbody>
+															<tr>
+																<td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+															</tr>
+														</tbody>
+													</table>
+													<!-- End Space-->
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- End Wrapper-->
+									<!-- Space-->
+									<!-- End Space-->
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- End Wrapper-->
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
