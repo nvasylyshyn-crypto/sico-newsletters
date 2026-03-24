@@ -2227,25 +2227,25 @@ html {
 
 @font-face {
   font-family: 'Scuba Offc';
-  src: url(../fonts/subset-ScubaOffc-Medium.woff2) format("woff2"), url(../fonts/subset-ScubaOffc-Medium.woff) format("woff");
+  src: url(../fonts/subset-ScubaOffc-Medium.woff2) format("woff2");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Scuba Offc';
-  src: url(../fonts/subset-ScubaOffc-Light.woff2) format("woff2"), url(../fonts/subset-ScubaOffc-Light.woff) format("woff");
+  src: url(../fonts/subset-ScubaOffc-Light.woff2) format("woff2");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Trola Text';
-  src: url(../fonts/TrolaText-Light.woff2) format("woff2"), url(../fonts/TrolaText-Light.woff) format("woff");
+  src: url(../fonts/TrolaText-Light.woff2) format("woff2");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Trola Text';
-  src: url(../fonts/TrolaText-Bold.woff2) format("woff2"), url(../fonts/TrolaText-Bold.woff) format("woff");
+  src: url(../fonts/TrolaText-Bold.woff2) format("woff2");
   font-weight: 700;
   font-style: normal; }
 
@@ -2323,7 +2323,7 @@ img {
   right: 0;
   left: 0;
   height: 112px;
-  background-image: url("../img/non-financial-banner-cloud.png");
+  background-image: none;
   -webkit-background-size: 80% 80%;
           background-size: 80%;
   background-position: 0;
@@ -2705,7 +2705,7 @@ body {
   position: relative;
   padding-top: 55%;
   padding-left: 15px;
-  background-image: url(https://sicobank.com/Themes/Default/img/backgrounds/footer-pattern-white.svg);
+  background-image: url(../Themes/Default/img/backgrounds/footer-pattern-white.svg);
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -2937,7 +2937,7 @@ footer {
 .full-height-bg {
   -webkit-background-size: cover;
           background-size: cover;
-  background: url("../img/homepage-bg.png");
+  background: none;
   background-position: top center;
   height: 100vh; }
 
@@ -3251,37 +3251,37 @@ footer {
       border-radius: 12px; }
 
 .light-reading-bg {
-  background-image: url(../img/bg-covers/light-reading.jpg); }
+  background-image: none; }
 
 .banking-tip-bg {
-  background-image: url(../img/bg-covers/banking-tip.png); }
+  background-image: none; }
 
 .banking-tip-ar-bg {
-  background-image: url(../img/bg-covers/banking-tip-ar.png); }
+  background-image: none; }
 
 .offers-bg {
-  background-image: url(../img/bg-covers/offers.png); }
+  background-image: none; }
 
 .health-bg {
-  background-image: url(../img/bg-covers/health-welness.png); }
+  background-image: none; }
 
 .spend-time-bg {
-  background-image: url(../img/bg-covers/spend-your-time.png); }
+  background-image: none; }
 
 .special-offers-bg {
-  background-image: url(../img/bg-covers/enjoy-a-special-offer.jpg); }
+  background-image: none; }
 
 .arts-bg {
-  background-image: url(../img/bg-covers/arts-culture.png); }
+  background-image: none; }
 
 .bonus-bg {
-  background-image: url(../img/bg-covers/bonus-bg.jpg); }
+  background-image: none; }
 
 .travel-bg {
-  background-image: url(../img/bg-covers/travel.png); }
+  background-image: none; }
 
 .market-bg {
-  background-image: url(../img/bg-covers/market.png); }
+  background-image: none; }
 
 .border-r-l {
   border-radius: 10px; }
@@ -3424,7 +3424,7 @@ footer {
   margin-bottom: 10px; }
 
 .bg-image-special-offer {
-  background-image: url(../img/special-offer.png);
+  background-image: none;
   background-repeat: no-repeat;
   padding: 40px 0; }
   .bg-image-special-offer .card-img {
@@ -3436,7 +3436,7 @@ footer {
     width: 140px; } }
 
 .did-you-know-panel {
-  background-image: url(../img/did-you-know.jpg);
+  background-image: none;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover; }
@@ -3446,7 +3446,7 @@ footer {
   margin: 0 auto; }
 
 .stay-update-panel {
-  background-image: url(../img/stay-update.jpg);
+  background-image: none;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover; }
@@ -3454,7 +3454,7 @@ footer {
     padding: 40px 52px; }
 
 .stay-update-panel-ar {
-  background-image: url(../img/stay-update-ar.jpg);
+  background-image: none;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover; }
