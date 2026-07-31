@@ -753,9 +753,36 @@ function createAnimatedBarChart() {
     });
   }
 
+  function initAnchorScroll() {
+    // Lenis takes over scrolling and overwrites any native hash-jump on the
+    // next tick, so anchor links ("Read more" -> #at-a-glance, "Back to top")
+    // need to be routed through lenis.scrollTo() explicitly.
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[href^="#"]');
+      if (!link) return;
+
+      var hash = link.getAttribute('href');
+      e.preventDefault();
+
+      if (hash === '#' || hash === '') {
+        if (_lenisInstance) _lenisInstance.scrollTo(0, { duration: 1.2 });
+        else window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
+      var target = document.querySelector(hash);
+      if (!target) return;
+
+      history.pushState(null, '', hash);
+      if (_lenisInstance) _lenisInstance.scrollTo(target, { duration: 1.2 });
+      else target.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
   Webflow.push(function () {
     gsap.registerPlugin(ScrollTrigger);
     constructSmoothScrollByLenis();
+    initAnchorScroll();
     initCounter();
     createAnimatedBarChart();
     countriesSwitcher();
