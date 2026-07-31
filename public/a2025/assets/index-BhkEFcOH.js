@@ -79,7 +79,7 @@ Error generating stack: `+i.message+`
           <div class="_2024-annual-report"><span class="_2024-annual-report-0">2025 </span><span class="_2024-annual-report-1">Annual<br>Report</span></div>
         </div>
       </div>
-      <a href="documents/SICO_AR25_Full_Report.pdf" target="_blank" class="w-inline-block">
+      <a href="https://cdn.prod.website-files.com/69df72c3095dd471eefbf55e/6a6c9197073b1320d873aa92_SICO_AR25_Full_Report.pdf" target="_blank" class="w-inline-block">
         <div class="button-white-contained">
           <div>Download Annual Report 2025</div><img src="images/button-image.png" loading="lazy" alt="" class="buttondeco">
         </div>
@@ -101,7 +101,7 @@ Error generating stack: `+i.message+`
       <div class="rowtitle">
         <h2 split-text="" class="color-secondary">At a Glance</h2>
         <div class="dividertitle"></div>
-        <a href="documents/SICO-AR25---At-a-Glance.pdf" target="_blank" class="w-inline-block">
+        <a href="https://cdn.prod.website-files.com/69df72c3095dd471eefbf55e/6a6c91937ad8d1f46acee993_SICO-AR25---At-a-Glance.pdf" target="_blank" class="w-inline-block">
           <div class="button-primary-contained">
             <div>Read More</div><img src="images/button-image.png" loading="lazy" alt="" class="buttondeco">
           </div>
@@ -176,7 +176,7 @@ Error generating stack: `+i.message+`
       <div class="rowtitle">
         <h2 split-text="">Charting the Course</h2>
         <div class="dividertitle"></div>
-        <a href="documents/SICO-AR25---Charting-the-Course.pdf" target="_blank" class="w-inline-block">
+        <a href="https://cdn.prod.website-files.com/69df72c3095dd471eefbf55e/6a6c91954775bad8658c2109_SICO-AR25---Charting-the-Course.pdf" target="_blank" class="w-inline-block">
           <div class="button-white-contained">
             <div>Read More</div><img src="images/button-image.png" loading="lazy" alt="" class="buttondeco">
           </div>
@@ -199,7 +199,7 @@ Error generating stack: `+i.message+`
     <div class="rowtitle">
       <h2 split-text="" class="color-secondary">SICO at 30: A Track Record of<br>Key Strategic Milestones</h2>
       <div class="dividertitle"></div>
-      <a href="documents/SICO-AR25---SICO-at-30.pdf" target="_blank" class="w-inline-block">
+      <a href="https://cdn.prod.website-files.com/69df72c3095dd471eefbf55e/6a6c91972ce1287c3d2afed3_SICO-AR25---SICO-at-30.pdf" target="_blank" class="w-inline-block">
         <div class="button-primary-contained">
           <div>Read More</div><img src="images/button-image.png" loading="lazy" alt="" class="buttondeco">
         </div>
@@ -226,7 +226,7 @@ Error generating stack: `+i.message+`
           <div class="col12">
             <p split-text="" class="testimonial-text-four">As we mark our 30<sup>th</sup> anniversary, we reflect on a journey defined by growth, transformation, and regional expansion. In recent years, our strategy has focused on institutionalizing this growth and expanding across the GCC’s most dynamic markets. By building a scalable regional platform capable of navigating market volatility while capturing new opportunities, we have evolved from a leading Bahraini institution into a major regional asset manager.<br>The foundation built during this strategic cycle now supports our next phase of multi-market expansion.</p>
           </div>
-          <a href="documents/SICO-AR25---Chairmans-Note.pdf" target="_blank" class="w-inline-block">
+          <a href="https://cdn.prod.website-files.com/69df72c3095dd471eefbf55e/6a6c91947ad8d1f46acee9de_SICO-AR25---Chairmans-Note.pdf" target="_blank" class="w-inline-block">
             <div class="button-primary-contained">
               <div>Read the full note</div><img src="images/button-image.png" loading="lazy" alt="" class="buttondeco">
             </div>
@@ -242,7 +242,7 @@ Error generating stack: `+i.message+`
           <h3 split-text="">Group CEO’s Note</h3>
           <h1 split-text="" class="heading-4">Najla M. Al Shirawi</h1>
           <div split-text="">2025 marks a major milestone for SICO—our 30<sup>th</sup> anniversary. What began as a local brokerage in Bahrain has grown into a diversified, multi-jurisdictional regional financial institution. Over three decades, our journey has been shaped by discipline, deep expertise, and an unwavering commitment to excellence. Today, SICO stands as a trusted partner to our clients and a leading force in regional financial markets. Our continued performance reflects the strength of our diversified model and our ability to navigate complex and evolving market conditions while maintaining a disciplined, long-term approach to growth.As we celebrate this milestone, we look ahead to the next chapter of our journey, guided by the same values that have defined SICO since 1995.</div>
-          <a href="documents/SICO-AR25---Group-CEO-Note.pdf" target="_blank" class="w-inline-block">
+          <a href="https://cdn.prod.website-files.com/69df72c3095dd471eefbf55e/6a6c919692780d40ba78ba51_SICO-AR25---Group-CEO-Note.pdf" target="_blank" class="w-inline-block">
             <div class="button-primary-contained">
               <div>Read the full note</div><img src="images/button-image.png" loading="lazy" alt="" class="buttondeco">
             </div>
@@ -259,7 +259,7 @@ Error generating stack: `+i.message+`
           <div class="_w-60 text-align-center">
             <div split-text="">SICO has recorded significant growth in assets under management, strong performance in brokerage, and notable expansion in investment banking, reinforcing our position as a trusted partner for M&amp;A and capital market transactions across both public and private markets.</div>
           </div>
-          <a href="documents/SICO-AR25---Financial-Highlights.pdf" target="_blank" class="w-inline-block">
+          <a href="https://cdn.prod.website-files.com/69df72c3095dd471eefbf55e/6a6c91965ed8f2d0b4a23a20_SICO-AR25---Financial-Highlights.pdf" target="_blank" class="w-inline-block">
             <div class="button-primary-contained">
               <div>Find out more</div><img src="images/button-image.png" loading="lazy" alt="" class="buttondeco">
             </div>
@@ -454,7 +454,7 @@ Error generating stack: `+i.message+`
       <div class="rowtitle">
         <h2 split-text="" class="color-secondary">Operational Review</h2>
         <div class="dividertitle"></div>
-        <a href="documents/SICO-AR25---Operational-Review.pdf" target="_blank" class="w-inline-block">
+        <a href="https://cdn.prod.website-files.com/69df72c3095dd471eefbf55e/6a6c919652337f3f470325e6_SICO-AR25---Operational-Review.pdf" target="_blank" class="w-inline-block">
           <div class="button-primary-contained">
             <div>Read More</div><img src="images/Intersect.svg" loading="lazy" alt="" class="buttondeco">
           </div>
@@ -552,7 +552,7 @@ Error generating stack: `+i.message+`
             <h2 split-text="">Environmental, Social, and Governance</h2>
             <div split-text="">SICO embeds sustainability principles throughout its operations to generate long-term value for stakeholders while aligning with Bahrain Vision 2030, the CBB ESG Guidelines, and the United Nations Principles for Responsible Investment (UN PRI).</div>
           </div>
-          <a href="documents/SICO-AR25---ESG.pdf" target="_blank" class="w-inline-block">
+          <a href="https://cdn.prod.website-files.com/69df72c3095dd471eefbf55e/6a6c919512d75fe94fc7bece_SICO-AR25---ESG.pdf" target="_blank" class="w-inline-block">
             <div class="button-primary-contained">
               <div>Find out more</div><img src="images/button-image.png" loading="lazy" alt="" class="buttondeco">
             </div>

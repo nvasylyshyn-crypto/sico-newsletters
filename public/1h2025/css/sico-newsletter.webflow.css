@@ -487,7 +487,7 @@ figcaption {
 .work-image {
   text-align: center;
   background-color: #f4f4f4;
-  background-image: url('/newsletters/assets/external/d3a0b06d_background-image.svg');
+  background-image: url('https://cdn.prod.website-files.com/69df72c3095dd471eefbf55e/6a6c922fefbd73b6927cd9c9_d3a0b06d_background-image.svg');
   background-position: 50%;
   background-size: cover;
   flex-direction: column;
@@ -1657,7 +1657,7 @@ figcaption {
 }
 
 .div-block {
-  background-image: url('/newsletters/assets/external/d3a0b06d_background-image.svg');
+  background-image: url('https://cdn.prod.website-files.com/69df72c3095dd471eefbf55e/6a6c922fefbd73b6927cd9c9_d3a0b06d_background-image.svg');
   background-position: 0 0;
   background-size: auto;
 }
