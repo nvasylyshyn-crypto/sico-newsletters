@@ -1,0 +1,1263 @@
+/* ============================================================
+   SICO Newsletter — Microinteractions
+   Professional · Clean · Modern
+   ============================================================ */
+
+/* --- Scroll Reveal ---------------------------------------- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity  0.5s cubic-bezier(0.22, 1, 0.36, 1) var(--mi-delay, 0ms),
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) var(--mi-delay, 0ms);
+}
+[data-reveal].mi-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* --- Reading Progress Bar --------------------------------- */
+#mi-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #1f314a 0%, #4a7fa5 100%);
+  z-index: 10000;
+  pointer-events: none;
+}
+
+/* --- Nav underline slide ---------------------------------- */
+.navlinktext {
+  position: relative;
+}
+.navlinktext::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: currentColor;
+  transition: width 0.22s ease;
+}
+.nav-item-base:hover .navlinktext::after,
+.nav-item-base.w--current .navlinktext::after,
+.nav-item-base[aria-current="page"] .navlinktext::after,
+.nav-item-base:has(.w--current) .navlinktext::after,
+.nav-item-base:has([aria-current="page"]) .navlinktext::after {
+  width: 100%;
+  background: #7ec8e3;   /* teal-white — visible on dark nav gradient */
+}
+
+/* Active top-level item: bright pill on the dark gradient */
+.nav-item-base.w--current,
+.nav-item-base[aria-current="page"],
+.nav-item-base:has(.w--current),
+.nav-item-base:has([aria-current="page"]) {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Dropdown sub-items: smaller than nav bar text (14px) */
+.navlink.sub {
+  font-size: 13px;
+}
+
+/* Active sub-item in Insights dropdown: teal pill */
+.navlink.sub.w--current,
+.navlink.sub[aria-current="page"] {
+  background-color: rgba(33, 147, 176, 0.14) !important;
+  color: #1a5f7a !important;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   NAV SHRINK ON SCROLL — desktop only (> 991px)
+   Sticky positioning + smooth padding + logo scale.
+   JS adds .is-scrolled to the nav element on scroll.
+   ============================================================ */
+@media (min-width: 992px) {
+  .header-style.navigationstyle {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    transition: box-shadow 0.3s ease;
+  }
+
+  /* Default: tighter than Webflow's original */
+  .header-style.navigationstyle .container-3 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: padding 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .header-style.navigationstyle .text-3 {
+    font-size: 12px;
+    line-height: 16px;
+    transition: font-size 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.28s ease;
+  }
+
+  /* Scrolled state — very compact */
+  .header-style.navigationstyle.is-scrolled .container-3 {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+
+  .header-style.navigationstyle.is-scrolled .text-3 {
+    font-size: 9px;
+    opacity: 0.6;
+  }
+}
+
+/* --- Hero intro (homepage CEO block) ---------------------- */
+.ceohomeimagecontainer {
+  overflow: hidden;
+}
+.hero-intro {
+  margin-top: 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.hero-intro:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.16);
+}
+.hero-intro .hp-ceoimage {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.hero-intro:hover .hp-ceoimage {
+  transform: scale(1.03);
+}
+
+/* --- Meet Team / New Appointments gap --------------------- */
+.meet-team + .new-appointments-container {
+  margin-top: 48px;
+}
+
+/* --- Meet Team block -------------------------------------- */
+.meet-team {
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.meet-team:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.16);
+}
+.meet-team .ceoimage {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.meet-team:hover .ceoimage {
+  transform: scale(1.03);
+}
+
+/* --- Homepage New Appointments: name/title list ----------- */
+.appt-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.appt-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.18s ease, padding-left 0.18s ease;
+}
+.appt-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+}
+.appt-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.appt-item:hover {
+  background: rgba(31, 49, 74, 0.06);
+  padding-left: 10px;
+}
+.appt-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f314a;
+  font-family: Scubaoffc, Arial, sans-serif;
+  line-height: 1.3;
+}
+.appt-title {
+  font-size: 13.5px;
+  font-weight: 300;
+  color: #4a6070;
+  font-family: Scubaoffc, Arial, sans-serif;
+  line-height: 1.4;
+}
+.appt-hp-block {
+  flex-direction: column;
+  align-items: stretch;
+  padding: 28px 72px 28px 56px;
+  gap: 16px;
+  border: none;
+}
+.appt-hp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.appt-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+}
+.appt-image-link,
+.appt-arrow-link {
+  display: contents;
+}
+.badge-text {
+  text-decoration: none;
+}
+
+/* --- New Appointments block -------------------------------- */
+.new-appointments-container {
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.page-home .new-appointments-container {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 6px;
+}
+.new-appointments-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.16);
+  color: inherit;
+}
+.new-appointments-container:hover h2,
+.new-appointments-container:hover h6,
+.new-appointments-container:hover p {
+  color: inherit;
+}
+.new-appointments-container .newappointmentsimage {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.new-appointments-container:hover .newappointmentsimage {
+  transform: scale(1.03);
+}
+
+/* --- Arrow nudge on hover --------------------------------- */
+.meet-team .arrow,
+.new-appointments-container .arrow,
+.general-card-container .arrow {
+  transition: transform 0.25s ease;
+}
+.meet-team:hover .arrow,
+.new-appointments-container:hover .arrow,
+.general-card-container:hover .arrow {
+  transform: translateX(6px);
+}
+
+/* --- General cards (Awards / ESG on homepage) ------------- */
+.general-card-container {
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.general-card-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.13);
+}
+.general-card-container .general-card-image {
+  height: 340px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.general-card-container:hover .general-card-image {
+  transform: scale(1.04);
+}
+
+/* --- Award items ------------------------------------------ */
+.frame-1000001892 {
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.frame-1000001892:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================================
+   STRUCTURE FIXES — Spacing, Borders & Image Rendering
+   ============================================================ */
+
+/* --- Anchor scroll offset: compensate for sticky nav ------- */
+/* scroll-margin-top pushes the scroll target down so the nav
+   doesn't overlap the heading when jumping to an anchor.     */
+[id] {
+  scroll-margin-top: 96px;
+}
+
+/* --- Inner page hero: flush against nav, locked height ----- */
+.page-hero-section {
+  margin-top: 0;
+  background: #dce3ed;
+  min-height: 50vh;
+}
+/* Propagate height through Webflow container wrappers        */
+.page-hero-section .container,
+.page-hero-section .inner-page-hero-section-container {
+  height: 100%;
+  min-height: 50vh;
+}
+/* Insights pages keep the taller hero */
+.page-insight .page-hero-section,
+.page-insight .page-hero-section .container,
+.page-insight .page-hero-section .inner-page-hero-section-container {
+  min-height: 56vh;
+}
+/* Stretch both columns to fill the full hero height          */
+.page-hero-section .inner-page-hero-section-container {
+  align-items: stretch;
+}
+
+/* --- Image containers: clip children, prevent overflow ---- */
+/* Required for correct image containment and zoom effects   */
+.page-inner-hero-image-container {
+  overflow: hidden;
+}
+
+/* --- Page inner images: fix object-fit default ------------ */
+/* Default in Webflow CSS is 'fill' which stretches/distorts  */
+/* editorial photography. 'cover' is the correct default.    */
+.page-inner-hero-image {
+  object-fit: cover;
+}
+/* Preserve contain for document and logo images */
+.page-inner-hero-image.contain {
+  object-fit: contain;
+  background-color: #f5f5f5;
+}
+
+/* --- News & ESG: visual separator between story sections -- */
+/* 20px margin alone is insufficient to delineate stories    */
+.newshighlights-section .inner-page-hero-section-container {
+  border-bottom: 1px solid #e8e8ea;
+}
+
+/* --- New Appointments: fix portrait image sizing ---------- */
+/* content-box + padding-top creates imprecise box dimensions */
+.image-6 {
+  box-sizing: border-box;
+  padding-top: 0;
+  border-radius: 6px;
+}
+
+/* --- New Appointments: bio text fills remaining width ----- */
+/* .flex-block has width:60% by default; override to grow    */
+/* and fill all available space after the portrait image.    */
+.section.appointments .new-appointments-container .flex-block {
+  flex: 1 1 auto;
+  width: auto;
+}
+
+/* --- New Appointments: divider between person cards ------- */
+.section.appointments .flex-block-2 + .flex-block-2 {
+  border-top: 1px solid #e8e8ea;
+  padding-top: 42px;
+}
+
+/* ============================================================
+   PAGE ENTRY NORMALIZATION
+   9 of 10 inner pages start flush (0px top).
+   .newherosection and .section both default to 50px top —
+   tag each page's first section and reset to 0, then restore
+   inner breathing room for text-only pages.
+   ============================================================ */
+
+/* All inner pages now start with .page-hero-section (padding: 0).
+   mi-page-start is kept as a safety net but no overrides are needed. */
+.mi-page-start {
+  padding-top: 0 !important;
+}
+
+/* ============================================================
+   INNER-PAGE HERO REDESIGN
+   Consistent editorial style across all inner pages.
+   Homepage (.hero-intro) is excluded — different structure.
+   ============================================================ */
+
+/* --- No left border — bg colour does the separation work -- */
+.page-hero-section .inner-page-hero-section-container {
+  border-left: none;
+}
+
+/* --- Text column: transparent against tinted bg ----------- */
+.page-hero-section .hero-content-half {
+  padding: 32px 48px;
+  background-color: transparent;
+  position: relative;
+}
+
+/* Tint overlay disabled — bg already provides depth */
+.page-hero-section .hero-content-half::before {
+  display: none;
+}
+
+/* --- sup-title: uppercase tracked label ------------------- */
+.page-hero-section .sup-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2193b0;
+  margin-bottom: 12px;
+  font-family: Scubaoffc, Arial, sans-serif;
+}
+
+/* --- Page title: tighten and darken ----------------------- */
+.page-hero-section .pagetitle {
+  color: #1f314a;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+/* --- Image column: fills remaining flex space, clips image - */
+.page-hero-section .page-inner-hero-image-container {
+  position: relative;
+  overflow: hidden;
+  flex: 1;                  /* grow to fill space beside text column */
+}
+
+/* Left-fade overlay: bg colour → transparent over photo      */
+.page-hero-section .page-inner-hero-image-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right,
+    #dce3ed 0%,
+    rgba(220, 227, 237, 0.85) 12%,
+    rgba(220, 227, 237, 0.25) 32%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Image: absolute fill so any image dimension works correctly */
+.page-hero-section .page-inner-hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.75) brightness(0.9);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.page-hero-section:hover .page-inner-hero-image {
+  transform: scale(1.04);
+}
+
+/* --- No bottom border — bg colour transition is enough ---- */
+.page-hero-section.utility-margin-bottom-3rem {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* --- Responsive: flip gradient top-to-bottom when stacked -- */
+@media (max-width: 767px) {
+  .page-hero-section .inner-page-hero-section-container {
+    border-left: none;
+    border-top: none;
+  }
+  .page-hero-section .hero-content-half {
+    padding: 32px 20px;
+  }
+  .page-hero-section .sup-title {
+    font-size: 10px;
+  }
+  .page-hero-section .page-inner-hero-image-container::after {
+    display: none;
+  }
+}
+
+/* ============================================================
+   INSIGHTS PAGES — revert hero to white editorial style
+   .page-insight is applied to all 4 Insights page bodies.
+   ============================================================ */
+.page-insight .page-hero-section {
+  background: #ffffff;
+  margin-top: 48px;
+  min-height: unset;        /* natural height — no lock */
+}
+.page-insight .page-hero-section .container,
+.page-insight .page-hero-section .inner-page-hero-section-container {
+  min-height: unset;
+  height: auto;
+}
+.page-insight .page-hero-section .inner-page-hero-section-container {
+  align-items: stretch;
+  border-left: 4px solid #2193b0;
+}
+.page-insight .page-hero-section .hero-content-half {
+  padding: 48px 40px;
+  background-color: #ffffff;
+}
+.page-insight .page-hero-section .hero-content-half::before {
+  display: block;
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(31, 49, 74, 0.035) 0%, transparent 60%);
+  pointer-events: none;
+}
+/* Image: revert to natural sizing (not absolute fill) */
+.page-insight .page-hero-section .page-inner-hero-image-container {
+  flex: unset;
+}
+.page-insight .page-hero-section .page-inner-hero-image {
+  position: static;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  filter: none;
+}
+.page-insight .page-hero-section .page-inner-hero-image-container::after {
+  background: linear-gradient(180deg, transparent 40%, rgba(29, 47, 71, 0.38) 100%);
+}
+.page-insight .page-hero-section.utility-margin-bottom-3rem {
+  border-bottom: none;
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .page-insight .page-hero-section .inner-page-hero-section-container {
+    border-left: none;
+    border-top: none;
+  }
+  .page-insight .page-hero-section .page-inner-hero-image-container::after {
+    background: linear-gradient(180deg, transparent 40%, rgba(29, 47, 71, 0.38) 100%);
+  }
+}
+
+/* ============================================================
+   ESG PAGE — GREEN HERO OVERRIDE
+   Replace the default blue-grey (#dce3ed) hero with a
+   matching sage-green hue for the sustainability page.
+   ============================================================ */
+
+.page-esg .page-hero-section {
+  background: #d4ede0;
+}
+
+.page-esg .page-hero-section .page-inner-hero-image-container::after {
+  background: linear-gradient(to right,
+    #d4ede0 0%,
+    rgba(212, 237, 224, 0.85) 12%,
+    rgba(212, 237, 224, 0.25) 32%,
+    transparent 50%
+  );
+}
+
+@media (max-width: 767px) {
+  .page-esg .page-hero-section .page-inner-hero-image-container::after {
+    background: linear-gradient(to bottom,
+      #d4ede0 0%,
+      rgba(212, 237, 224, 0.45) 35%,
+      transparent 75%
+    );
+  }
+}
+
+/* ============================================================
+   ESG PAGE — ALTERNATING SECTION BACKGROUNDS
+   Each subsection gets a distinct brand-colour wash.
+   Colours are tints of the primary palette:
+     #2193b0 (teal accent) → light washes for odd sections
+     #1f314a (navy primary) → light wash for even section
+   Adjacent-sibling selectors target sections by position
+   without touching HTML outside of esg.html.
+   ============================================================ */
+
+/* Base: all ESG content sections get full-width padding */
+.page-esg .newshighlights-section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+/* Section 1 — Financial Literacy: light teal wash */
+.page-esg .page-hero-section + .newshighlights-section {
+  background-color: #eaf5fb;
+}
+
+/* Section 2 — Women's Empowerment: light navy wash */
+.page-esg .newshighlights-section + .newshighlights-section {
+  background-color: #edf2f7;
+}
+
+/* Section 3 — Food Bank: deeper teal wash */
+.page-esg .newshighlights-section + .newshighlights-section + .newshighlights-section {
+  background-color: #d8edf6;
+}
+
+/* ============================================================
+   LAYOUT NORMALIZATION
+   Aligns inner-page sections with homepage structural rhythm.
+   Fixes: insights grid math, section spacing, tablet stacking.
+   ============================================================ */
+
+/* --- Normalize content section vertical rhythm ------------ */
+/* Matches .section (50px top/bottom) used on the homepage.  */
+/* .page-esg .newshighlights-section overrides this to 56px. */
+.newshighlights-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* --- Remove border-bottom from ESG sections --------------- */
+/* Alternating background colours already separate sections.  */
+.page-esg .newshighlights-section .inner-page-hero-section-container {
+  border-bottom: none;
+}
+
+/* --- Remove trailing border on last content section ------- */
+/* The final story has no following sibling — border redundant. */
+.newshighlights-section:not(:has(+ .newshighlights-section)) .inner-page-hero-section-container {
+  border-bottom: none;
+}
+
+/* --- Fix insights grid: 3 equal columns filling full width - */
+/* With 3 cards and 24px gaps (2 gaps = 48px total),          */
+/* each card gets calc(33.333% - 16px).                       */
+.insightsgrid .utility-link-content-block {
+  flex: 1 1 calc(33.333% - 16px);
+  max-width: calc(33.333% - 16px);
+  min-width: 0;
+}
+
+/* --- Tablet: intermediate breakpoint at 991px ------------- */
+/* Avoids columns getting too narrow in the 768–991px range.  */
+/* Inner page hero intentionally stays side-by-side here.     */
+@media (max-width: 991px) {
+  /* Insights grid: 2-col at tablet */
+  .insightsgrid .utility-link-content-block {
+    flex: 1 1 calc(50% - 12px);
+    max-width: calc(50% - 12px);
+  }
+
+  /* Content sections: stack vertically, image on top */
+  .newshighlights-section .inner-page-hero-section-container {
+    flex-flow: column;
+  }
+  .newshighlights-section .page-inner-hero-image-container {
+    width: 100%;
+    order: -1;
+  }
+  .newshighlights-section .hero-content-half {
+    width: 100%;
+  }
+}
+
+/* --- Mobile: 1-col insights grid -------------------------- */
+@media (max-width: 767px) {
+  .insightsgrid .utility-link-content-block {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* ============================================================
+   HOMEPAGE — NEWS HIGHLIGHTS SECTION
+   Dark navy (matches nav gradient), individual linked cards.
+   ============================================================ */
+
+/* Fix: Webflow sets .section.bggradientcolor to background-color:#000
+   and background-image:none, overriding the gradient. Restore navy. */
+.section.bggradientcolor {
+  background-color: #1d2f47 !important;
+  background-image: linear-gradient(135deg, #1d2f47 0%, #2e5080 100%) !important;
+}
+
+/* Section heading: white on dark bg */
+.nh-section-title {
+  color: #fff;
+  margin: 0;
+}
+
+/* Outer container: subtle border, rounds the inner area */
+.nh-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 28px;
+}
+
+/* 2-column grid of cards */
+.nh-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* Individual card */
+.nh-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+}
+.nh-card:hover {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(124, 200, 227, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Number badge */
+.nh-num {
+  font-size: 10px;
+  font-weight: 700;
+  color: #7ec8e3;
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+  font-family: Scubaoffc, Arial, sans-serif;
+  min-width: 20px;
+}
+
+/* Headline text */
+.nh-headline {
+  flex: 1;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.5;
+  font-family: Scubaoffc, Arial, sans-serif;
+}
+
+/* Arrow icon: white */
+.nh-arrow {
+  flex-shrink: 0;
+  filter: brightness(0) invert(1) opacity(0.5);
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+.nh-card:hover .nh-arrow {
+  opacity: 1;
+  transform: translateX(3px);
+  filter: brightness(0) invert(0.7) sepia(1) hue-rotate(170deg) saturate(3);
+}
+
+/* Footer: "Read all" link */
+.nh-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.nh-footer .primary-button {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.nh-footer .primary-button .text-10 {
+  color: rgba(255, 255, 255, 0.8);
+}
+.nh-footer .primary-button .vector {
+  filter: brightness(0) invert(1) opacity(0.7);
+}
+
+/* Responsive: 1 column on mobile */
+@media (max-width: 767px) {
+  .nh-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   AWARDS PAGE — RECOGNITION SHOWCASE
+   Editorial annual-report aesthetic: navy stats strip,
+   numbered category headers, gold+teal card accents.
+   Gold is a page-scoped CSS variable — no other page affected.
+   ============================================================ */
+
+/* Gold accent token — awards context only */
+.page-awards {
+  --aw-gold: #b8860b;
+  --aw-gold-bg: rgba(184, 134, 11, 0.06);
+}
+
+/* --- Awards hero: warm golden background ------------------ */
+.page-awards .page-hero-section {
+  background: #ede8d4;
+}
+.page-awards .page-hero-section .page-inner-hero-image-container::after {
+  background: linear-gradient(to right,
+    #ede8d4 0%,
+    rgba(237, 232, 212, 0.85) 12%,
+    rgba(237, 232, 212, 0.25) 32%,
+    transparent 50%
+  );
+}
+@media (max-width: 767px) {
+  .page-awards .page-hero-section .page-inner-hero-image-container::after {
+    background: linear-gradient(to bottom,
+      #ede8d4 0%,
+      rgba(237, 232, 212, 0.45) 35%,
+      transparent 75%
+    );
+  }
+}
+
+/* --- News Highlights hero: fresh neutral green ------------ */
+/* Distinct from ESG sage (#d4ede0) — cooler, more neutral  */
+.page-news-highlights .page-hero-section {
+  background: #d6edd8;
+}
+.page-news-highlights .page-hero-section .page-inner-hero-image-container::after {
+  background: linear-gradient(to right,
+    #d6edd8 0%,
+    rgba(214, 237, 216, 0.85) 12%,
+    rgba(214, 237, 216, 0.25) 32%,
+    transparent 50%
+  );
+}
+@media (max-width: 767px) {
+  .page-news-highlights .page-hero-section .page-inner-hero-image-container::after {
+    background: linear-gradient(to bottom,
+      #d6edd8 0%,
+      rgba(214, 237, 216, 0.45) 35%,
+      transparent 75%
+    );
+  }
+}
+
+/* --- New Appointments hero: fresh slate-teal -------------- */
+/* People & careers — calm, professional, forward-looking   */
+.page-new-appointments .page-hero-section {
+  background: #d4e8ed;
+}
+.page-new-appointments .page-inner-hero-image-container {
+  width: 65%;
+}
+.page-new-appointments .page-hero-section .page-inner-hero-image-container::after {
+  display: none;
+}
+.appt-marquee-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 340px;
+  align-self: center;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%);
+}
+.appt-marquee-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: appt-scroll 36s linear infinite;
+}
+.appt-marquee-img {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+@keyframes appt-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (max-width: 767px) {
+  .page-new-appointments .page-hero-section .page-inner-hero-image-container::after {
+    background: linear-gradient(to bottom,
+      #d4e8ed 0%,
+      rgba(212, 232, 237, 0.45) 35%,
+      transparent 75%
+    );
+  }
+}
+
+/* --- Meet the Team hero: soft purple hue ------------------ */
+.page-meet-team .page-hero-section {
+  background: #e8e0f0;
+}
+.page-meet-team .page-hero-section .page-inner-hero-image-container::after {
+  background: linear-gradient(to right,
+    #e8e0f0 0%,
+    rgba(232, 224, 240, 0.85) 12%,
+    rgba(232, 224, 240, 0.25) 32%,
+    transparent 50%
+  );
+}
+@media (max-width: 767px) {
+  .page-meet-team .page-hero-section .page-inner-hero-image-container::after {
+    background: linear-gradient(to bottom,
+      #e8e0f0 0%,
+      rgba(232, 224, 240, 0.45) 35%,
+      transparent 75%
+    );
+  }
+}
+
+/* --- Awards body section ---------------------------------- */
+.page-awards .page-awards-body {
+  padding-top: 72px;
+  padding-bottom: 88px;
+}
+
+/* --- Category group --------------------------------------- */
+.aw-category {
+  margin-bottom: 72px;
+}
+.aw-category:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Category header: eyebrow number + name + year badge -- */
+.aw-cat-header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e8e8ea;
+  position: relative;
+}
+/* Short teal accent line — more refined than full-width     */
+.aw-cat-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 56px;
+  height: 2px;
+  background: #2193b0;
+}
+.aw-cat-num {
+  font-family: Trolatext, Georgia, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2193b0;
+  opacity: 0.7;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.aw-cat-name {
+  font-family: Trolatext, Georgia, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1f314a;
+  line-height: 1.2;
+  margin: 0;
+  flex: 1;
+}
+
+/* --- Award grids ------------------------------------------ */
+.aw-grid { display: grid; gap: 20px; }
+.aw-grid-1 { grid-template-columns: 1fr; }
+.aw-grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+/* --- Award card base -------------------------------------- */
+.aw-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e8e8ea;
+  border-radius: 12px;
+  padding: 36px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+/* Gold-to-teal gradient top accent bar */
+.aw-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--aw-gold) 0%, #2193b0 100%);
+}
+.aw-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(31, 49, 74, 0.12);
+  border-color: rgba(33, 147, 176, 0.28);
+}
+
+/* --- Logo zone -------------------------------------------- */
+.aw-card-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96px;
+}
+.aw-logo-img {
+  max-width: 200px;
+  max-height: 96px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+/* FT wordmark is extremely wide — allow generous height     */
+.aw-logo-ft {
+  max-height: 72px;
+  max-width: 260px;
+}
+
+/* --- Award title ------------------------------------------ */
+.aw-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f314a;
+  line-height: 1.5;
+  font-family: Scubaoffc, Arial, sans-serif;
+  margin: 0;
+}
+
+/* --- Featured card (single MENA award) -------------------- */
+/* Horizontal layout; Trolatext display title; gold watermark */
+.aw-card-featured {
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+  gap: 48px;
+  padding: 44px 56px;
+  background: linear-gradient(135deg, var(--aw-gold-bg) 0%, rgba(33, 147, 176, 0.03) 100%);
+  border-color: rgba(184, 134, 11, 0.22);
+}
+.aw-card-featured::before {
+  background: linear-gradient(90deg, var(--aw-gold) 0%, var(--aw-gold) 50%, #2193b0 100%);
+}
+.aw-card-featured .aw-card-logo {
+  flex-shrink: 0;
+  height: 120px;
+}
+.aw-card-featured .aw-logo-img {
+  max-width: 220px;
+  max-height: 120px;
+}
+.aw-card-featured .aw-card-content {
+  flex: 1;
+}
+.aw-card-featured .aw-card-title {
+  font-family: Trolatext, Georgia, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #1f314a;
+}
+/* Decorative rank watermark — large ghost number, bottom right */
+.aw-card-rank {
+  position: absolute;
+  bottom: 8px;
+  right: 20px;
+  font-family: Trolatext, Georgia, sans-serif;
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: var(--aw-gold);
+  opacity: 0.1;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Tagline below Awards page title */
+.aw-hero-sub {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2193b0;
+  font-family: Scubaoffc, Arial, sans-serif;
+  margin: 14px 0 0;
+}
+
+/* --- Responsive ------------------------------------------- */
+@media (max-width: 991px) {
+  .aw-grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767px) {
+  .aw-grid-3 { grid-template-columns: 1fr; }
+  .page-awards .page-awards-body { padding-top: 36px; padding-bottom: 48px; }
+  .aw-category { margin-bottom: 40px; }
+  .aw-card { padding: 24px 20px 20px; gap: 12px; }
+  .aw-card-logo { height: 72px; }
+  .aw-logo-img { max-height: 72px; max-width: 160px; }
+  .aw-logo-ft { max-height: 52px; max-width: 200px; }
+  .aw-card-title { font-size: 13px; }
+  .aw-card-featured {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px 36px;
+    gap: 16px;
+  }
+  .aw-card-featured .aw-card-logo { height: 80px; }
+  .aw-card-featured .aw-logo-img { max-height: 80px; }
+  .aw-card-featured .aw-card-title { font-size: 1rem; }
+  .aw-stats-inner { flex-wrap: wrap; gap: 28px; }
+  /* Mobile: stack hero, gradient flips top-to-bottom (correct gold colour) */
+  .page-awards .page-hero-section,
+  .page-awards .page-hero-section .container,
+  .page-awards .page-hero-section .inner-page-hero-section-container {
+    min-height: unset;
+  }
+  .page-awards .page-hero-section .inner-page-hero-section-container {
+    border-top: none;
+  }
+  .page-awards .page-hero-section .hero-content-half {
+    padding: 32px 20px 24px;
+  }
+  .page-awards .page-hero-section .page-inner-hero-image-container {
+    min-height: 220px;
+  }
+  .page-awards .page-hero-section .page-inner-hero-image-container::after {
+    background: linear-gradient(to bottom,
+      #ede8d4 0%,
+      rgba(237, 232, 212, 0.45) 35%,
+      transparent 75%
+    );
+  }
+}
+
+/* ============================================================
+   MOBILE GLOBAL FIXES — 767px and below
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+  /* --- Fix text justification: justify looks bad on narrow screens */
+  p, li, blockquote, td, th {
+    text-align: left !important;
+  }
+
+  /* --- Restore center alignment for awards cards ------------ */
+  /* Global left-align above overrides the awards center styles */
+  .aw-card p,
+  .aw-card-title,
+  .aw-card-featured p,
+  .aw-card-featured .aw-card-title,
+  .aw-hero-sub {
+    text-align: center !important;
+  }
+
+  /* --- Remove forced min-height from inner page heroes ------ */
+  /* 56vh = ~473px on mobile — far too tall when content stacks */
+  .page-hero-section,
+  .page-hero-section .container,
+  .page-hero-section .inner-page-hero-section-container {
+    min-height: unset;
+  }
+  /* Restore height for absolutely-positioned hero images ------- */
+  /* The image uses position:absolute; inset:0; height:100%.     */
+  /* Without a container height it collapses to zero → invisible */
+  .page-hero-section .page-inner-hero-image-container {
+    min-height: 400px;
+  }
+
+  /* --- Insight pages: remove large top gap + tighten padding  */
+  .page-insight .page-hero-section {
+    margin-top: 0;
+  }
+  .page-insight .page-hero-section .hero-content-half {
+    padding: 24px 20px;
+  }
+
+  /* --- Make all data tables horizontally scrollable ---------- */
+  /* Prevents tables from overflowing the viewport invisibly    */
+  .code-embed.w-embed,
+  .code-embed-2.w-embed {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    max-width: 100%;
+  }
+  /* Tighten table cell padding on narrow screens */
+  .code-embed.w-embed td,
+  .code-embed.w-embed th,
+  .code-embed-2.w-embed td,
+  .code-embed-2.w-embed th {
+    padding: 6px 8px !important;
+    font-size: 12px;
+  }
+
+  /* --- New Appointments inner page: fix half-width text bug -- */
+  /* Desktop: align-items:center + align-self:flex-start is fine  */
+  /* Mobile stacked column: children must stretch to full width   */
+  .section.appointments .new-appointments-container {
+    align-items: stretch;
+  }
+  .section.appointments .new-appointments-container .w-layout-vflex {
+    align-self: stretch;
+    width: 100%;
+  }
+
+  /* --- New Appointments inner page: cap portrait image height */
+  .section.appointments .image-6 {
+    max-height: 280px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  /* --- General card images: reduce height on mobile ---------- */
+  .general-card-container .general-card-image {
+    height: 220px;
+  }
+
+  /* --- Insight article: tighten content box padding ---------- */
+  .page-insight .section > .container {
+    padding: 20px 16px;
+  }
+
+  /* --- Mobile nav: fix Insights dropdown submenu appearance --- */
+  /* Desktop dropdown has semi-transparent box backgrounds that   */
+  /* look wrong when rendered inside the dark mobile nav overlay  */
+  .dropdowncontainer {
+    background: transparent !important;
+  }
+  /* The .nav-item-base wrapping Insights gets a highlight bg     */
+  /* from Webflow that creates a visible box — remove it.         */
+  .nav-item-base:has(.dropdownwrapper) {
+    background: transparent !important;
+  }
+  /* Current-page sub-link uses dark teal (#1a5f7a) — unreadable  */
+  /* against the dark nav background. Override to white.          */
+  .navlink.sub.w--current,
+  .navlink.sub[aria-current="page"] {
+    background-color: rgba(33, 147, 176, 0.25) !important;
+    color: #ffffff !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .appt-two-col {
+    grid-template-columns: 1fr;
+  }
+  .appt-hp-block {
+    padding: 20px 24px 20px 24px;
+  }
+}
