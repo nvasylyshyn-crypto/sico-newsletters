@@ -761,6 +761,12 @@ function createAnimatedBarChart() {
       var link = e.target.closest('a[href^="#"]');
       if (!link) return;
 
+      // Webflow's own tab component (.w-tab-link) uses "#w-tabs-..." hrefs and
+      // handles its own click routing (including the synthetic tab.click()
+      // calls in fixTabsContentHeight below) — don't hijack those or the URL
+      // ends up with a stray #w-tabs-...-pane-0 hash and tab switching breaks.
+      if (link.classList.contains('w-tab-link') || link.closest('.w-tabs')) return;
+
       var hash = link.getAttribute('href');
       e.preventDefault();
 
