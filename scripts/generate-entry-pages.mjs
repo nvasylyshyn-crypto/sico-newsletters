@@ -4,6 +4,7 @@ import path from 'node:path';
 const PUBLIC_DIR = path.resolve('public');
 
 const ENTRIES = [
+  ['a2025.html', 'a2025/index.html', '/newsletters/a2025/'],
   ['1h25.html', '1h25/index.html', '/newsletters/1h25/'],
   ['1h2025.html', '1h2025/index.html', '/newsletters/1h2025/'],
   ['1h24.html', '1h24/index.html', '/newsletters/1h24/'],

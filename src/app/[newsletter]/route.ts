@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ENTRY_FILES: Record<string, string> = {
+  a2025: 'a2025/index.html',
   '1h25': '1h25/index.html',
   '1h2025': '1h2025/index.html',
   '1h24': '1h24/index.html',

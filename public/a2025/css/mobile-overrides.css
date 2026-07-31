@@ -1,0 +1,927 @@
+/* SICO Annual Report - Overrides */
+
+/* Operational Review — clip image at container right edge (desktop only) */
+@media screen and (min-width: 768px) {
+  .business-lines-tabs { overflow: hidden; }
+}
+
+/* ============================================
+   HOVER INTERACTIONS (desktop only)
+   ============================================ */
+@media (hover: hover) {
+  .button-primary-contained,
+  .button-white-contained {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .button-primary-contained:hover,
+  .button-white-contained:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .glance-single-kpi {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .glance-single-kpi:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  .financial-highlight-grid-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  .financial-highlight-grid-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.18);
+  }
+
+  .countryclick {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .countryclick:hover {
+    transform: translateX(4px);
+  }
+
+  .tab-link {
+    transition: background-color 0.3s ease, transform 0.3s ease,
+                border-radius 0.3s ease, box-shadow 0.3s ease;
+  }
+  .tab-link:not(.w--current):hover {
+    background-color: rgba(255, 255, 255, 0.65);
+    color: var(--primary);
+    box-shadow: 0 2px 12px rgba(37, 54, 83, 0.12);
+    border-radius: 6px;
+  }
+
+  .env-vertical-col {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  .env-vertical-col:hover {
+    transform: scale(1.06);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Section heading sizing - make rowtitle h2s larger */
+.rowtitle h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* Make key section titles bigger */
+.section h2[split-text],
+.section h3[split-text],
+.heading-3[split-text] {
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 767px) {
+  .section h2[split-text],
+  .section h3[split-text],
+  .heading-3[split-text] {
+    font-size: 36px;
+  }
+}
+
+/* Fix text visibility in ESG circles on desktop */
+.env-vertical-col {
+  padding: 40px 25px;
+  overflow: hidden;
+}
+
+.env-vertical-col div[split-text] {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Paragraph spacing in operational review tab content */
+.businessline-tab-single-content .w-richtext p {
+  margin-bottom: 1.2em;
+}
+.businessline-tab-single-content .w-richtext p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   OPERATIONAL REVIEW — DESKTOP FIXES
+   ============================================ */
+
+/* Financial highlight KPI boxes — always white background (not just on hover) */
+.financial-highlight-grid-item {
+  background-color: #ffffff;
+}
+
+/* Fix 1: Stable tab content height — prevents box from jumping
+   when switching between tabs with different content lengths */
+.tabs-content {
+  min-height: 320px;
+}
+
+/* Fix 2: Visual differentiation — white box on #f5f7fa background
+   needs border + shadow to read as a distinct card.
+   Top corners flat (0) so the active tab row sits flush against the card —
+   eliminates the rounded-corner gap at the Asset Management tab left edge. */
+.tabs-content {
+  border: 1px solid rgba(37, 54, 83, 0.1);
+  box-shadow: 0 4px 24px rgba(37, 54, 83, 0.08);
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+/* Fix 3: Match the empty .casestudie section's background to Operational Review.
+   An empty <section class="section casestudie"> sits between the two sections;
+   its default background-color: #fff (white) shows as a white band.
+   Set it to #f5f7fa so it blends into the Operational Review section above. */
+.section.casestudie {
+  background-color: #f5f7fa;
+}
+
+/* Fix 4: Active tab — rounded top corners + shadow, connects visually to content box */
+.tab-link.w--current {
+  border-radius: 8px 8px 0 0;
+  box-shadow: -2px -4px 12px rgba(37, 54, 83, 0.08), 2px -4px 12px rgba(37, 54, 83, 0.08);
+  position: relative;
+  z-index: 1; /* sits above content box so corners meet cleanly */
+}
+
+/* Fix 5: Static tab decoration — fixed height prevents the right-side image
+   from jumping or resizing as tab content height changes */
+.tab-content-flex {
+  min-height: 280px;
+}
+.tab-decoration {
+  min-height: 280px;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+/* Fix 6: Smooth CSS transition on ESG decoration elements for mouse parallax JS */
+.sustainability-decoration-left,
+.sustainability-decoration-right {
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+
+/* Hero decoration — smooth transition for hero mouse parallax */
+.hero-decoration {
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+/* ============================================
+   OPERATIONAL REVIEW — TAB BLEND
+   Active tab merges visually with the content
+   box below it: matching bg + border + -1px
+   margin overlap erases the seam.
+   ============================================ */
+.tab-link.w--current {
+  background-color: #ffffff;
+  border: 1px solid rgba(37, 54, 83, 0.1);
+  /* Cover the content box's top border at the tab's position with white —
+     creates the seamless tab-to-card join */
+  border-bottom: 1px solid #ffffff;
+  /* Overlap the content box top edge by 1px so no gap is visible */
+  margin-bottom: -1px;
+}
+
+/* Ensure charting-the-course image is visible */
+.creatingvalue-image-container .base-image {
+  opacity: 1 !important;
+}
+
+/* GPU-accelerate heavy sections for smoother scrolling */
+.section.ceo,
+.section.regional-footprint.ceos {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  contain: layout style paint;
+}
+
+/* Ensure footer is always reachable */
+.footer-subscribe {
+  position: relative;
+  z-index: 10;
+}
+
+/* Supplements the Webflow CSS with additional mobile fixes */
+
+/* ============================================
+   TABLET (max-width: 991px)
+   ============================================ */
+@media screen and (max-width: 991px) {
+  .section.regional-footprint {
+    height: auto;
+    min-height: 500px;
+  }
+
+  .section.regional-footprint.ceos {
+    height: auto;
+    min-height: 450px;
+  }
+
+  .col6 {
+    flex: 100%;
+    width: 100%;
+  }
+
+  .col6.align-end.country-description {
+    position: relative;
+    width: 100%;
+    top: auto;
+    left: auto;
+    min-height: auto;
+  }
+
+  .countryimage {
+    width: 45%;
+  }
+
+  ._w-50 {
+    width: 100%;
+  }
+
+  .business-lines-tabs .businessline-tab-single-content {
+    max-width: 100%;
+  }
+
+  .image-3 {
+    display: none;
+  }
+
+  .fh-containe-special {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .fh-decoration {
+    width: 40vw;
+  }
+}
+
+/* ============================================
+   MOBILE (max-width: 767px)
+   ============================================ */
+@media screen and (max-width: 767px) {
+  .section.regional-footprint {
+    height: auto;
+    min-height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .countryimage {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+
+  .col6.align-end.country-description {
+    position: relative !important;
+    width: 100%;
+    top: auto !important;
+    left: auto;
+    min-height: 80px;
+    margin-top: 12px;
+  }
+
+  ._w-30.fixedheight {
+    position: relative;
+    height: auto;
+    min-height: 60px;
+    display: none;
+  }
+
+  ._w-30.fixedheight.visible {
+    display: block;
+  }
+
+  .hero-banner {
+    min-height: 80vh;
+  }
+
+  .hero-decoration {
+    width: 100%;
+    opacity: 0.3;
+  }
+
+  ._2024-annual-report {
+    margin-top: 40px;
+  }
+
+  .testimonial-wrapper-four {
+    flex-direction: column;
+  }
+
+  .testimonial-left {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .testimonial-image-four {
+    width: 80px;
+    height: 80px;
+  }
+
+  .env-vertical-col {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 12px;
+    aspect-ratio: auto;
+    padding: 24px;
+  }
+
+  .financialhighlights-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .financial-highlight-grid-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #w-node-_9abe5558-8d97-72db-d4b4-d4a7043baf7a-15a05d6f,
+  #w-node-_9abe5558-8d97-72db-d4b4-d4a7043baf99-15a05d6f,
+  #w-node-_9abe5558-8d97-72db-d4b4-d4a7043bafb8-15a05d6f,
+  #w-node-_9abe5558-8d97-72db-d4b4-d4a7043bafd7-15a05d6f,
+  #w-node-_9abe5558-8d97-72db-d4b4-d4a7043baff6-15a05d6f,
+  #w-node-_9abe5558-8d97-72db-d4b4-d4a7043bb015-15a05d6f,
+  #w-node-_9abe5558-8d97-72db-d4b4-d4a7043bb034-15a05d6f {
+    grid-column: span 1 / span 1;
+  }
+
+  .tabs-menu {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .tabs-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab-link {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .section.creating-value-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Restore side padding for text content inside creating-value-section.
+     The section's padding:0 is for full-width milestone images. Inner containers
+     need padding back — but ONLY direct-child .rowtitle (SICO at 30), not the
+     .rowtitle inside ._w-container (Charting the Course) which would double-pad. */
+  .section.creating-value-section ._w-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .section.creating-value-section > .rowtitle {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  .fh-decoration {
+    display: none;
+  }
+
+  .mini-kpi-bars {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .stretch-items {
+    flex-direction: column;
+  }
+
+  .row.stretch-items.px-5 {
+    flex-direction: column;
+  }
+}
+
+/* ============================================
+   SMALL MOBILE (max-width: 479px)
+   ============================================ */
+@media screen and (max-width: 479px) {
+  .section.regional-footprint {
+    height: auto;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .countryimage {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin-top: 0;
+  }
+
+  .countryclick.active {
+    font-size: 24px;
+  }
+
+  .countryclick {
+    font-size: 16px;
+  }
+
+  ._w-30.fixedheight {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    position: relative;
+  }
+
+  .col6.align-end.country-description {
+    position: relative;
+    width: 100%;
+    top: auto;
+    left: auto;
+  }
+
+  .button-white-contained,
+  .button-primary-contained {
+    font-size: 13px;
+    padding: 10px 36px 10px 16px;
+  }
+
+  .text-xxl-3 {
+    font-size: 36px;
+  }
+
+  .text-xxl-4 {
+    font-size: 16px;
+  }
+
+  .glance-single-kpi {
+    padding: 16px;
+  }
+
+  .section.sustainbility-new-section {
+    padding-top: 40px;
+    overflow: visible; /* prevent touch scroll-lock on iOS — decorations are display:none on mobile */
+  }
+
+  .sustainability-decoration-left,
+  .sustainability-decoration-right {
+    display: none;
+  }
+
+  .hero-decoration {
+    opacity: 0.25;
+  }
+
+  .section.ceo.animate-reveal,
+  .section.ceo {
+    background-size: cover;
+    background-position: center top;
+    min-height: auto;
+    padding-top: 300px;
+  }
+
+  .fh-containe-special {
+    padding: 20px 0;
+  }
+}
+
+/* ============================================
+   MOBILE AUDIT FIXES — 2026-03-27
+   Approved: MOB-01 through MOB-27 (all CSS-fixable issues)
+   MOB-18 skipped — JS-only fix (threshold:1 in initChartsAnimation)
+   MOB-04, MOB-17, MOB-20, MOB-21, MOB-24, MOB-25, MOB-26 — no fix needed
+   ============================================ */
+
+/* ---- MOB-02: Restore brand fonts overridden by Tailwind Preflight ----
+   Tailwind Preflight sets html { font-family: ui-sans-serif, system-ui... }
+   on the html element and loads AFTER this file. !important required. */
+html { font-family: "Subset Scubaoffc", sans-serif !important; }
+body { font-family: "Subset Scubaoffc", sans-serif !important; }
+h1, h2, h3, h4, h5, h6 { font-family: "Trolatext", Georgia, sans-serif !important; }
+
+/* ---- MOB-01: Restore heading sizes stripped by Tailwind Preflight ----
+   Tailwind Preflight sets h1-h6 { font-size: inherit; font-weight: inherit }
+   which collapses all headings to body font size. Loads after this file. */
+body h1 { font-size: 65px !important; font-weight: 700 !important; line-height: 120% !important; }
+body h2,
+body h3 { font-size: 41px !important; font-weight: 700 !important; line-height: 120% !important; }
+body h4  { font-size: 33px !important; font-weight: 700 !important; line-height: 120% !important; }
+body h5  { font-size: 27px !important; font-weight: 700 !important; line-height: 120% !important; }
+body h6  { font-size: 21px !important; font-weight: 700 !important; line-height: 120% !important; }
+
+/* ---- MOB-05: Restore anchor color from Tailwind's inherit reset ---- */
+a { color: var(--textcolor); }
+.section.sustainbility-new-section a,
+.section.regional-footprint a,
+.whitetext a { color: var(--white); }
+
+/* ---- MOB-23: Accessible focus-visible styles ---- */
+:focus-visible {
+  outline: 2px solid var(--tertiary);
+  outline-offset: 2px;
+}
+
+/* ---- MOB-22: :active tap feedback for touch devices ----
+   No hover guard needed — :active is touch-safe and fires on all devices. */
+.button-primary-contained:active,
+.button-white-contained:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+  transition: transform 0.08s ease, opacity 0.08s ease;
+}
+
+.tab-link:active {
+  background-color: rgba(255, 255, 255, 0.12);
+  transition: background-color 0.08s ease;
+}
+
+.countryclick:active {
+  opacity: 0.7;
+  transition: opacity 0.08s ease;
+}
+
+.glance-single-kpi:active {
+  transform: scale(0.98);
+  transition: transform 0.08s ease;
+}
+
+/* ============================================
+   TOUCH MICRO-INTERACTIONS (@media hover: none)
+   Base transitions + missing :active states for
+   all 6 elements that have desktop hover effects.
+   Ensures press AND release are both animated.
+   ============================================ */
+@media (hover: none) {
+  /* Base transitions — makes release smooth (not just press-in) */
+  .button-primary-contained,
+  .button-white-contained {
+    transition: transform 0.12s ease, opacity 0.12s ease, box-shadow 0.12s ease;
+  }
+
+  .glance-single-kpi {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .financial-highlight-grid-item {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+
+  .countryclick {
+    transition: opacity 0.12s ease;
+  }
+
+  .tab-link {
+    transition: background-color 0.15s ease;
+  }
+
+  .env-vertical-col {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  /* Missing :active states — elements not covered by MOB-22 */
+
+  /* Financial highlight cards: scale + white bg (desktop uses translateY(-8px) which
+     is too dramatic for a momentary tap — scale(1.02) gives the same "lift" feel) */
+  .financial-highlight-grid-item:active {
+    transform: scale(1.02);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+  }
+
+  /* ESG cards: identical to desktop hover — scale(1.03) + shadow */
+  .env-vertical-col:active {
+    transform: scale(1.03);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* ============================================
+   AUDIT FIXES — TABLET (max-width: 991px)
+   ============================================ */
+@media screen and (max-width: 991px) {
+  /* MOB-01 cont.: Tablet heading size restoration */
+  body h1 { font-size: 42px !important; }
+  body h2 { font-size: 32px !important; }
+  body h3 { font-size: 24px !important; }
+  body h5 { font-size: 20px !important; }
+
+  /* MOB-03: Restore button styles stripped by Tailwind Preflight
+     Tailwind resets button { padding: 0; background-color: transparent } */
+  .button-primary-contained {
+    padding: 12px 44px 12px 24px !important;
+    background-color: var(--primary) !important;
+  }
+  .button-white-contained {
+    padding: 12px 44px 12px 24px !important;
+    background-color: var(--white) !important;
+  }
+}
+
+/* ============================================
+   AUDIT FIXES — MOBILE (max-width: 767px)
+   ============================================ */
+@media screen and (max-width: 767px) {
+  /* MOB-06: Hero title explicit mobile font size */
+  ._2024-annual-report {
+    font-size: 38px;
+    line-height: 1.15;
+  }
+
+  /* MOB-09: Tab link touch target — increase from ~33px to 44px minimum */
+  .tab-link {
+    min-height: 44px;
+    padding: 13px 16px; /* increased from 8px top/bottom */
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* MOB-11: countryclick touch target — currently bare text (~19px) */
+  .countryclick {
+    min-height: 44px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  /* MOB-12: Navbar mobile menu button — conditional, ensures 44px minimum */
+  .w-nav-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* MOB-13: Tabs-menu scroll fade hint — reveals overflow content exists */
+  .tabs-menu {
+    padding-right: 32px;
+  }
+  .business-lines-tabs {
+    position: relative;
+  }
+  .business-lines-tabs::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(245, 247, 250, 0.95));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* MOB-16: ESG card text size increase for mobile readability */
+  .env-vertical-col div[split-text] {
+    font-size: 15px;
+  }
+
+  /* MOB-19: Prevent JS positionDesc() inline top from displacing
+     country-description on mobile where position is relative */
+  .col6.align-end.country-description {
+    top: auto !important;
+  }
+}
+
+/* ============================================
+   AUDIT FIXES — SMALL MOBILE (max-width: 479px)
+   ============================================ */
+@media screen and (max-width: 479px) {
+  /* MOB-01 cont.: Small mobile heading size restoration */
+  body h1 { font-size: 32px !important; }
+  body h2 { font-size: 24px !important; }
+  body h4 { font-size: 20px !important; }
+  body h5 { font-size: 16px !important; }
+
+  /* MOB-03 cont.: Button padding restoration at small mobile */
+  .button-white-contained,
+  .button-primary-contained {
+    padding: 10px 36px 10px 16px !important;
+  }
+
+  /* MOB-06 cont.: Hero title at small mobile */
+  ._2024-annual-report {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  /* MOB-07: split-text heading missing 479px override */
+  .section h2[split-text],
+  .section h3[split-text],
+  .heading-3[split-text] {
+    font-size: 26px;
+    line-height: 1.2;
+  }
+
+  /* MOB-08: Raise body font minimum from 14px to 15px for readability
+     !important needed — Webflow sets 14px at 479px; Tailwind inherits body */
+  body { font-size: 15px !important; }
+
+  /* MOB-10: Button touch targets — increase from ~36px to 44px minimum */
+  .button-white-contained,
+  .button-primary-contained {
+    min-height: 44px;
+    padding: 14px 36px 14px 16px !important; /* overrides the 10px above */
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* MOB-14: Restore hero min-height — 767px rule sets 80vh which bleeds into
+     479px, overriding Webflow's 70vh at 479px. Restore Webflow's value. */
+  .hero-banner {
+    min-height: 70vh;
+  }
+
+  /* MOB-15: CEO section padding-top — 300px creates excessive dead space
+     on short screens (iPhone SE: 568px height). Reduce to 200px. */
+  .section.ceo.animate-reveal,
+  .section.ceo {
+    padding-top: 200px;
+  }
+
+  /* MOB-27: Strengthen text-xxl-3/4 specificity against Tailwind reset */
+  body .text-xxl-3 { font-size: 36px !important; }
+  body .text-xxl-4 { font-size: 16px !important; }
+}
+
+/* ============================================
+   CEO SECTION — MOBILE TWO-PART LAYOUT
+   Backup tag: ceo-section-pre-mobile-rework
+   On desktop the CEO photo is a background-image covering the full section
+   with text overlaid on the right. On mobile the image crops to her face
+   area and the text overlaps her — unusable. Solution: remove background
+   image on mobile, use ::before pseudo to show the photo above the text
+   on a solid navy background. Content reads top-to-bottom: photo → text.
+   ============================================ */
+@media screen and (max-width: 767px) {
+  .section.ceo.animate-reveal,
+  .section.ceo {
+    background-image: none !important;
+    background-color: #1e2d44 !important; /* dark navy, matches var(--primary) tone */
+    padding-top: 0 !important;
+    min-height: auto !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* CEO photo block — renders above the text content */
+  .section.ceo::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-image: url('../images/NAJLA-NEW-PIC-TO-USE-extended-copy.jpg');
+    background-size: cover;
+    background-position: left center; /* left side = CEO face */
+    flex-shrink: 0;
+  }
+
+  /* Text content: padding above so it breathes below the photo */
+  .section.ceo ._w-container {
+    padding-top: 32px;
+    padding-bottom: 40px;
+    color: #ffffff;
+    flex: 1;
+  }
+
+  /* Ensure headings and text are white on dark bg */
+  .section.ceo h1,
+  .section.ceo h2,
+  .section.ceo h3,
+  .section.ceo h4,
+  .section.ceo p,
+  .section.ceo div[split-text] {
+    color: #ffffff !important;
+  }
+}
+
+/* ---- CEO photo height on small mobile ---- */
+@media screen and (max-width: 479px) {
+  .section.ceo.animate-reveal,
+  .section.ceo {
+    padding-top: 0 !important; /* override the 200px set in old audit rule */
+  }
+  .section.ceo::before {
+    height: 240px;
+  }
+}
+
+/* ============================================
+   ESG SECTION — RESTORE COLORS ON MOBILE
+   The ESG circles have rgba(0,0,0,0.31) bg on the dark navy section.
+   On mobile the section bg may fall back to transparent / white (CSS
+   variable resolution issue in the React build), making the semi-
+   transparent circles read as near-white. Explicitly set both.
+   ============================================ */
+@media screen and (max-width: 767px) {
+  .section.sustainbility-new-section {
+    background-color: #253653 !important; /* var(--primary) */
+    color: #ffffff;
+  }
+
+  .env-vertical-col {
+    background-color: rgba(0, 0, 0, 0.31);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* ============================================
+   ESG SECTION — BACKGROUND IMAGE
+   Aerial forest landscape (nanobanana, 2026-03-28)
+   Dark navy overlay (rgba 0.80) preserves white
+   text legibility while letting the image breathe.
+   ============================================ */
+.section.sustainbility-new-section {
+  background-image:
+    linear-gradient(
+      rgba(0, 30, 69, 0.80),
+      rgba(0, 30, 69, 0.80)
+    ),
+    url('../images/esg-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ============================================
+   WHO WE ARE — COUNTRY TABS (MOBILE)
+   1. Separate from subtitle text above via margin
+   2. Make active tab visually distinct (teal
+      left-border indicator, not same white as
+      body text)
+   3. Tighten gap to description below
+   ============================================ */
+@media screen and (max-width: 767px) {
+  /* Push country group away from subtitle text above */
+  .col6 h6.countryclick:first-of-type {
+    margin-top: 20px;
+    padding-top: 8px;
+  }
+
+  /* Active tab: keep white but add teal left-bar so it reads
+     as "selected" and not as plain body text */
+  h6.countryclick.active {
+    color: #ffffff !important;
+    border-left: 3px solid #2cbaec;
+    padding-left: 10px;
+  }
+
+  /* Inactive tabs: nudge them in to align with active */
+  h6.countryclick:not(.active) {
+    padding-left: 13px; /* 3px border + 10px padding = same indent */
+  }
+
+  /* Tighten gap between last country tab and description */
+  .col6.align-end.country-description {
+    margin-top: 6px !important;
+  }
+}
+
+/* ============================================
+   WHO WE ARE — TIGHTEN COUNTRY TABS TO DESCRIPTION
+   An empty .row.align-start spacer div sits between
+   the tabs and the description, adding ~60px of dead
+   space (empty item + 2× flex gaps). Hide it on mobile
+   and reduce the container row-gap.
+   ============================================ */
+@media screen and (max-width: 767px) {
+  .section.regional-footprint .row.align-start:empty {
+    display: none;
+  }
+
+  .section.regional-footprint section._w-container {
+    row-gap: 14px;
+  }
+}
+
+/* ============================================
+   WHO WE ARE — COUNTRY TABS (DESKTOP)
+   Mirror the mobile visual treatment:
+   1. Margin separation from subtitle above
+   2. Teal left-bar on active tab so it reads
+      as "selected", not plain body text
+   3. Aligned indent on inactive tabs
+   ============================================ */
+@media screen and (min-width: 768px) {
+  .col6 h6.countryclick:first-of-type {
+    margin-top: 16px;
+    padding-top: 8px;
+  }
+
+  h6.countryclick.active {
+    color: #ffffff !important;
+    border-left: 3px solid #2cbaec;
+    padding-left: 10px;
+  }
+
+  h6.countryclick:not(.active) {
+    padding-left: 13px;
+  }
+}

@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 export default function Page() {
   const newsletters = [
+    { name: 'Annual Report 2025', href: '/a2025.html' },
     { name: '1H 2025', href: '/1h25.html' },
     { name: '1H 2025 (Archive)', href: '/1h2025.html' },
     { name: '1H 2024', href: '/1h24.html' },
