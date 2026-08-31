@@ -3,6 +3,7 @@ import path from 'node:path';
 
 const ENTRY_FILES: Record<string, string> = {
   a2025: 'a2025/index.html',
+  '2h2026': '2h2026/index.html',
   '1h2026': '1h2026/index.html',
   '1h25': '1h25/index.html',
   '1h2025': '1h2025/index.html',
@@ -22,8 +23,8 @@ function injectBaseHref(html: string, slug: string) {
     return html.replace(/<base[^>]*href=["'][^"']*["'][^>]*>/i, `<base href="${baseHref}">`);
   }
 
-  if (html.includes('</head>')) {
-    return html.replace('</head>', `  <base href="${baseHref}">\n</head>`);
+  if (html.includes('<head>')) {
+    return html.replace('<head>', `<head>\n  <base href="${baseHref}">`);
   }
 
   return html;
